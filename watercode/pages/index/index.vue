@@ -1,6 +1,11 @@
 <template>
 	<view class="content">
-		 
+		
+		  <view class="u-padding-30">统计图原型</view>
+		  <gauge></gauge>
+		  
+		  
+		
 	</view>
 </template>
 
@@ -8,7 +13,8 @@
 	export default {
 		data() {
 			return {
-				title: 'Hello'
+				title: 'Hello',
+				 
 			}
 		},
 		onLoad() {
