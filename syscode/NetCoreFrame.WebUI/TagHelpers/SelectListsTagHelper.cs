@@ -68,7 +68,7 @@ namespace NetCoreFrame.WebUI.TagHelpers
 
             var container = new TagBuilder("select");
             container.Attributes.Add("name", Name);
-            container.Attributes.Add("id", Name);
+            container.Attributes.Add("id", Name); 
             container.Attributes.Add("lay-verify", "");
             container.Attributes.Add("lay-search", "");
 

@@ -155,76 +155,11 @@ namespace NetCoreFrame.WebUI
                 endpoints.MapHub<SignalrHubs>("/hub");
             });
 
-            #region 监听TCP
-           
-            lifetime.ApplicationStarted.Register(() =>
-            {
-                Task.Run(() =>
-                {
-                    Console.WriteLine("启动一个Socket服务端");
-
-                    int port = 60001;
-                    string host = "127.0.0.1";//服务器端ip地址
-
-                    IPAddress ip = IPAddress.Parse(host);
-                    IPEndPoint ipe = new IPEndPoint(ip, port);
-
-                    serverSocket = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
-                    serverSocket.Bind(ipe);
-                    serverSocket.Listen(10);
-                    Console.WriteLine("等待客户端连接...");
-
-                    try
-                    {
-                        ThreadPool.QueueUserWorkItem(state=> ListenClientSocket());
-                        //Thread socketThread = new Thread(ListenClientSocket);
-                        //socketThread.Start();
-                    }
-                    catch (Exception ex)
-                    {
-                        Console.WriteLine($"Socket Error:" + ex.Message);
-                    }
-                    finally {
-                        //serverSocket.Close();
-                    }
-                });
-            });
-            #endregion
+         
         }
-        static void ListenClientSocket()
-        {
-            while (true)
-            {
-                Socket clientSocket = serverSocket.Accept();
-                Console.WriteLine("连接已建立....");
-                #region 消息回发
-                byte[] sendByte = Encoding.ASCII.GetBytes("success!");
-                clientSocket.Send(sendByte, sendByte.Length, 0);
-                #endregion
-
-                #region 连接客户端，解析数据,多线程
-                ThreadPool.QueueUserWorkItem(state => ReceiveSocket(clientSocket));
-                //Thread receivethread = new Thread(ReceiveSocket); //委托方法
-                //receivethread.Start(clientSocket);
-                #endregion
-
-            }
-        }
+        
 
 
-        static void ReceiveSocket(object clientsocket)
-        { 
-            Socket myclientSocket= (Socket)clientsocket;
-            while (true)
-            {
-                string recStr = "";
-                byte[] recBytes = new byte[4096];
-                int bytes = myclientSocket.Receive(recBytes, recBytes.Length, 0);
-
-                recStr += Encoding.ASCII.GetString(recBytes, 0, bytes);
-                string RetMsg = $"客户端:{myclientSocket.RemoteEndPoint.ToString()},消息：{recStr},时间:{DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss")}";
-                Console.WriteLine($"获得客户端消息：{RetMsg}");
-            }
-        }
+        
     }
 }

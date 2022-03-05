@@ -109,5 +109,20 @@ namespace NetCoreFrame.Entity.Enum
         Publish=1,
 
     }
- 
+
+
+    public enum RentStatus
+    { 
+        /// <summary>
+        /// 可租用 
+        /// </summary>
+        CanRent=0,
+
+        /// <summary>
+        /// 租用中  
+        /// </summary>
+        InRent=1
+    }
+
+    
 }

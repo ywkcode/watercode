@@ -2,7 +2,7 @@
     ViewData["Title"] = "主页";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
- 
+
 <div class="layui-layout layui-layout-admin">
     <!-- 顶部 -->
     <div class="layui-header header">
@@ -18,7 +18,7 @@
                         <dd class="layui-this" data-menu="contentManagement"><a href="javascript:;"><i class="layui-icon" data-icon="&#xe63c;">&#xe63c;</i><cite>内容管理</cite></a></dd>
                         <dd data-menu="memberCenter"><a href="javascript:;"><i class="seraph icon-icon10" data-icon="icon-icon10"></i><cite>用户中心</cite></a></dd>
                         <dd data-menu="systemeSttings"><a href="javascript:;"><i class="layui-icon" data-icon="&#xe620;">&#xe620;</i><cite>系统设置</cite></a></dd>
-                        <dd data-menu="seraphApi"><a href="javascript:;"><i class="layui-icon" data-icon="&#xe705;">&#xe705;</i><cite>使用文档</cite></a></dd>
+
                     </dl>
                 </li>
             </ul>
@@ -87,54 +87,54 @@
                     </dl>
                 </li>
             </ul>
-            <div class="layui-tab-content clildFrame"> 
+            <div class="layui-tab-content clildFrame">
                 <div class="layui-tab-item layui-show">
                     <blockquote class="layui-elem-quote layui-text">
                         基本信息
                     </blockquote>
-                
+
                     <div class="layui-row">
                         <div class="layui-col-md4">
                             <div class="layui-panel">
-                                <label class="layui-form-label">产线：7</label>
+                                <label class="layui-form-label">商品：10</label>
                             </div>
                         </div>
                         <div class="layui-col-md4">
                             <div class="layui-panel">
-                                <label class="layui-form-label">工位：40</label>
+                                <label class="layui-form-label">订单：100</label>
                             </div>
                         </div>
                         <div class="layui-col-md4">
                             <div class="layui-panel">
-                                <label class="layui-form-label">文档：35</label>
+                                <label class="layui-form-label">今日可租：10</label>
                             </div>
                         </div>
                     </div>
-                   
-                    <blockquote class="layui-elem-quote layui-text" style="margin-top: 10px;">
-                        统计信息
-                    </blockquote>
-                    <div id="main" style="width: 650px;height:350px;margin:0 auto;"></div>
-                    <blockquote class="layui-elem-quote layui-text"  >
+
+                    @*<blockquote class="layui-elem-quote layui-text" style="margin-top: 10px;">
+                            统计信息
+                        </blockquote>
+                        <div id="main" style="width: 650px;height:350px;margin:0 auto;"></div>*@
+                    <blockquote class="layui-elem-quote layui-text">
                         联系我们
                     </blockquote>
-                    <table class="layui-table"     lay-skin="line">
+                    <table class="layui-table" lay-skin="line">
                         <colgroup>
                             <col width="150">
-                            <col width="200"> 
+                            <col width="200">
                         </colgroup>
-                     
+
                         <tbody>
                             <tr>
                                 <td>公司名称</td>
-                                <td>无锡维码科技有限公司</td> 
+                                <td>无锡维码科技有限公司</td>
                             </tr>
                             <tr>
                                 <td>联系方式</td>
                                 <td>15251611633</td>
-                                
+
                             </tr>
-                          
+
                         </tbody>
                     </table>
 
@@ -169,7 +169,7 @@
         });
         function LoadChart() {
             var myChart = echarts.init(document.getElementById('main'));
-            
+
             // 指定图表的配置项和数据
             var option = {
                 xAxis: {
@@ -188,11 +188,19 @@
                     }
                 }]
             };
-           
+
             // 使用刚指定的配置项和数据显示图表。
             myChart.setOption(option);
 
         }
 
     </script>
+}
+@section Styles{
+    <style type="text/css">
+        .layui-form-label {
+            width: 90px !important;
+        }
+    </style>
+
 }

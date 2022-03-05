@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Text;
- 
+using NetCoreFrame.Entity.Wedrent;
 
 namespace NetCoreFrame.Entity
 {
@@ -64,6 +64,13 @@ namespace NetCoreFrame.Entity
         public DbSet<ProductionStation> ProductionStation { get; set; }
         #endregion
 
+        #region 
+        public DbSet<W_Goods> W_Goods { get; set; }
+        public DbSet<W_GoodsDetail> W_GoodsDetail { get; set; }
+        public DbSet<W_Order> W_Order { get; set; }
+        public DbSet<W_Order_Goods> W_Order_Goods { get; set; }
+
+        #endregion
 
     }
 }

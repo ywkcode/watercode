@@ -13,7 +13,7 @@
 }
 <div class="login">
     <form asp-controller="Account" asp-action="SysLogin" method="post" data-ajax="true" data-ajax-success="afterSuccess">
-        <h1>ESOP管理系统</h1>
+        <h1>婚纱租赁系统</h1>
         <div class="layui-form-item">
             <input type="text" name="username" class="layui-input" placeholder="用户名" />
 
@@ -21,10 +21,10 @@
         <div class="layui-form-item">
             <input type="password" name="Password" class="layui-input" placeholder="密码" />
         </div>
-        <div class="layui-row">
-            <button type="submit" class="layui-btn login_btn" Tex="登陆">登陆</button>
+        <div class="layui-row" style="text-align:center">
+            <button type="submit" class="layui-btn login_btn" Tex="登陆" style="text-align:center;">登陆</button>
 
-            <button class="layui-btn login_btn layui-bg-orange" Tex="注册" onclick='@Url.Action("Regist","Account")' style="float:right">注册</button>
+            @*<button class="layui-btn login_btn layui-bg-orange" Tex="注册" onclick='@Url.Action("Regist","Account")' style="float:right">注册</button>*@
         </div>
     </form>
     @section Scripts{

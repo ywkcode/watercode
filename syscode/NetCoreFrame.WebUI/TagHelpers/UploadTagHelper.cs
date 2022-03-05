@@ -26,7 +26,8 @@ namespace NetCoreFrame.WebUI.TagHelpers
         /// <summary>
         /// 上传路径
         /// </summary>
-        public string UploadUrl { get; set; } = "/FileUpload/FileMinIoSave";
+        //public string UploadUrl { get; set; } = "/FileUpload/FileMinIoSave";
+        public string UploadUrl { get; set; } = "/FileUpload/FileSave";
 
         protected string ShowList { get; set; }
 
@@ -62,7 +63,7 @@ namespace NetCoreFrame.WebUI.TagHelpers
                 <input type='text' name='{Name}' id='{Name}' class='layui-input'>
             </div>
             <div class='layui-upload-list' style='display:{ShowList};text-align:center'>
-                <img class='layui-upload-img' id='{Name}_img' style='width:100px;height:100px'>
+                <img class='layui-upload-img' id='{Name}_img' style='width:200px;height:200px'>
                 <p id='demoText'></p>
             </div>
               ");
@@ -71,17 +72,20 @@ namespace NetCoreFrame.WebUI.TagHelpers
  
                  <script> 
             layui.use('upload', function() {{
-                var $ = layui.jquery
+                //var $ = layui.jquery
+                  var $ = layui.$
                    , upload = layui.upload;
                 //普通图片上传
                 var uploadInst = upload.render({{
                 elem: '#{btnuploadId}'
-                    , url: '{UploadUrl}' //改成您自己的上传接口
+                , url: '{UploadUrl}' //改成您自己的上传接口
+                //,multiple:true
                 , before: function(obj) {{
 
                         obj.preview(function(index, file, result) {{
                           $('#{Name}_img').attr('src', result); //图片链接（base64）
                         }});
+                        $('#{ Name}_img').attr('src','{SelectdValue}');
                     }}
             , done: function(res) {{
                         //如果上传失败
@@ -107,7 +111,7 @@ namespace NetCoreFrame.WebUI.TagHelpers
                     }}
                 }});
            }});
-             $('#{ Name}_img').attr('src','{SelectdValue}');
+             //$('#{ Name}_img').attr('src','{SelectdValue}');
            </script> ");
             }
             else {

@@ -29,4 +29,18 @@ namespace NetCoreFrame.Entity.ViewModel
         /// </summary>
         public bool IsChoose { get; set; }
     }
+
+    /// <summary>
+    /// 多选
+    /// </summary>
+    public class MultiSelectlistViewModel
+    { 
+       public string name { get; set; }
+
+        public string value { get; set; }
+
+        public string type { get; set; }
+
+        public string selected { get; set; }
+    }
 }
