@@ -1,0 +1,686 @@
+2021-08-15 20:56:42,166 [13] ERROR Microsoft.AspNetCore.SignalR.HubConnectionHandler - Error when dispatching 'OnDisconnectedAsync' on hub.
+System.ArgumentNullException: Value cannot be null. (Parameter 'connectionId')
+   at Microsoft.AspNetCore.SignalR.DefaultHubLifetimeManager`1.RemoveFromGroupAsync(String connectionId, String groupName, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.SignalR.Internal.GroupManager`1.RemoveFromGroupAsync(String connectionId, String groupName, CancellationToken cancellationToken)
+   at NetCoreFrame.WebUI.Views.Hubs.SignalrHubs.OnDisconnectedAsync(Exception exception) in D:\MyPrj\2021\ESOP\代码\NetCoreFrame.WebUI\Hubs\SignalrHubs.cs:line 49
+   at Microsoft.AspNetCore.SignalR.Internal.DefaultHubDispatcher`1.OnDisconnectedAsync(HubConnectionContext connection, Exception exception)
+   at Microsoft.AspNetCore.SignalR.Internal.DefaultHubDispatcher`1.OnDisconnectedAsync(HubConnectionContext connection, Exception exception)
+   at Microsoft.AspNetCore.SignalR.HubConnectionHandler`1.HubOnDisconnectedAsync(HubConnectionContext connection, Exception exception)
+2021-08-15 20:56:42,186 [13] ERROR Microsoft.AspNetCore.Http.Connections.Internal.HttpConnectionManager - Failed disposing connection UeLT6wp9N7XimLxp7Cr1yg.
+System.ArgumentNullException: Value cannot be null. (Parameter 'connectionId')
+   at Microsoft.AspNetCore.SignalR.DefaultHubLifetimeManager`1.RemoveFromGroupAsync(String connectionId, String groupName, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.SignalR.Internal.GroupManager`1.RemoveFromGroupAsync(String connectionId, String groupName, CancellationToken cancellationToken)
+   at NetCoreFrame.WebUI.Views.Hubs.SignalrHubs.OnDisconnectedAsync(Exception exception) in D:\MyPrj\2021\ESOP\代码\NetCoreFrame.WebUI\Hubs\SignalrHubs.cs:line 49
+   at Microsoft.AspNetCore.SignalR.Internal.DefaultHubDispatcher`1.OnDisconnectedAsync(HubConnectionContext connection, Exception exception)
+   at Microsoft.AspNetCore.SignalR.Internal.DefaultHubDispatcher`1.OnDisconnectedAsync(HubConnectionContext connection, Exception exception)
+   at Microsoft.AspNetCore.SignalR.HubConnectionHandler`1.HubOnDisconnectedAsync(HubConnectionContext connection, Exception exception)
+   at Microsoft.AspNetCore.SignalR.HubConnectionHandler`1.RunHubAsync(HubConnectionContext connection)
+   at Microsoft.AspNetCore.SignalR.HubConnectionHandler`1.OnConnectedAsync(ConnectionContext connection)
+   at Microsoft.AspNetCore.SignalR.HubConnectionHandler`1.OnConnectedAsync(ConnectionContext connection)
+   at Microsoft.AspNetCore.Http.Connections.Internal.HttpConnectionContext.ExecuteApplication(ConnectionDelegate connectionDelegate)
+   at Microsoft.AspNetCore.Http.Connections.Internal.HttpConnectionContext.WaitOnTasks(Task applicationTask, Task transportTask, Boolean closeGracefully)
+   at Microsoft.AspNetCore.Http.Connections.Internal.HttpConnectionContext.DisposeAsync(Boolean closeGracefully)
+   at Microsoft.AspNetCore.Http.Connections.Internal.HttpConnectionManager.DisposeAndRemoveAsync(HttpConnectionContext connection, Boolean closeGracefully)
+2021-08-15 20:58:55,030 [8] ERROR NetCoreFrame.WebUI.Filter.HttpGlobalExceptionFilter - --------FrameRelations/LoadRoleMenu Error Begin--------
+2021-08-15 20:58:55,030 [11] ERROR Microsoft.AspNetCore.SignalR.HubConnectionHandler - Error when dispatching 'OnConnectedAsync' on hub.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at NetCoreFrame.WebUI.Extensions.CurrentUser.get__session() in D:\MyPrj\2021\ESOP\代码\NetCoreFrame.WebUI\Extensions\CurrentUser.cs:line 19
+   at NetCoreFrame.WebUI.Extensions.CurrentUser.get_UserName() in D:\MyPrj\2021\ESOP\代码\NetCoreFrame.WebUI\Extensions\CurrentUser.cs:line 41
+   at NetCoreFrame.WebUI.Views.Hubs.SignalrHubs.OnConnectedAsync() in D:\MyPrj\2021\ESOP\代码\NetCoreFrame.WebUI\Hubs\SignalrHubs.cs:line 22
+   at Microsoft.AspNetCore.SignalR.Internal.DefaultHubDispatcher`1.OnConnectedAsync(HubConnectionContext connection)
+   at Microsoft.AspNetCore.SignalR.Internal.DefaultHubDispatcher`1.OnConnectedAsync(HubConnectionContext connection)
+   at Microsoft.AspNetCore.SignalR.HubConnectionHandler`1.RunHubAsync(HubConnectionContext connection)
+2021-08-15 20:58:55,036 [8] ERROR NetCoreFrame.WebUI.Filter.HttpGlobalExceptionFilter -   Error Detail:Object reference not set to an instance of an object.
+2021-08-15 20:58:55,040 [8] ERROR NetCoreFrame.WebUI.Filter.HttpGlobalExceptionFilter - --------FrameRelations/LoadRoleMenu Error End--------
+2021-08-15 20:59:03,687 [9] ERROR Microsoft.AspNetCore.SignalR.HubConnectionHandler - Error when dispatching 'OnConnectedAsync' on hub.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at NetCoreFrame.WebUI.Extensions.CurrentUser.get__session() in D:\MyPrj\2021\ESOP\代码\NetCoreFrame.WebUI\Extensions\CurrentUser.cs:line 19
+   at NetCoreFrame.WebUI.Extensions.CurrentUser.get_UserName() in D:\MyPrj\2021\ESOP\代码\NetCoreFrame.WebUI\Extensions\CurrentUser.cs:line 41
+   at NetCoreFrame.WebUI.Views.Hubs.SignalrHubs.OnConnectedAsync() in D:\MyPrj\2021\ESOP\代码\NetCoreFrame.WebUI\Hubs\SignalrHubs.cs:line 22
+   at Microsoft.AspNetCore.SignalR.Internal.DefaultHubDispatcher`1.OnConnectedAsync(HubConnectionContext connection)
+   at Microsoft.AspNetCore.SignalR.Internal.DefaultHubDispatcher`1.OnConnectedAsync(HubConnectionContext connection)
+   at Microsoft.AspNetCore.SignalR.HubConnectionHandler`1.RunHubAsync(HubConnectionContext connection)
+2021-08-15 20:59:03,782 [6] ERROR NetCoreFrame.WebUI.Filter.HttpGlobalExceptionFilter - --------FrameRelations/LoadRoleMenu Error Begin--------
+2021-08-15 20:59:03,783 [6] ERROR NetCoreFrame.WebUI.Filter.HttpGlobalExceptionFilter -   Error Detail:Object reference not set to an instance of an object.
+2021-08-15 20:59:03,784 [6] ERROR NetCoreFrame.WebUI.Filter.HttpGlobalExceptionFilter - --------FrameRelations/LoadRoleMenu Error End--------
+2021-08-15 20:59:15,671 [10] ERROR Microsoft.AspNetCore.SignalR.HubConnectionHandler - Error when dispatching 'OnConnectedAsync' on hub.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at NetCoreFrame.WebUI.Extensions.CurrentUser.get__session() in D:\MyPrj\2021\ESOP\代码\NetCoreFrame.WebUI\Extensions\CurrentUser.cs:line 19
+   at NetCoreFrame.WebUI.Extensions.CurrentUser.get_UserName() in D:\MyPrj\2021\ESOP\代码\NetCoreFrame.WebUI\Extensions\CurrentUser.cs:line 41
+   at NetCoreFrame.WebUI.Views.Hubs.SignalrHubs.OnConnectedAsync() in D:\MyPrj\2021\ESOP\代码\NetCoreFrame.WebUI\Hubs\SignalrHubs.cs:line 22
+   at Microsoft.AspNetCore.SignalR.Internal.DefaultHubDispatcher`1.OnConnectedAsync(HubConnectionContext connection)
+   at Microsoft.AspNetCore.SignalR.Internal.DefaultHubDispatcher`1.OnConnectedAsync(HubConnectionContext connection)
+   at Microsoft.AspNetCore.SignalR.HubConnectionHandler`1.RunHubAsync(HubConnectionContext connection)
+2021-08-15 20:59:15,748 [11] ERROR NetCoreFrame.WebUI.Filter.HttpGlobalExceptionFilter - --------FrameRelations/LoadRoleMenu Error Begin--------
+2021-08-15 20:59:15,749 [11] ERROR NetCoreFrame.WebUI.Filter.HttpGlobalExceptionFilter -   Error Detail:Object reference not set to an instance of an object.
+2021-08-15 20:59:15,750 [11] ERROR NetCoreFrame.WebUI.Filter.HttpGlobalExceptionFilter - --------FrameRelations/LoadRoleMenu Error End--------
+2021-08-15 20:59:52,848 [13] ERROR Microsoft.AspNetCore.SignalR.HubConnectionHandler - Error when dispatching 'OnDisconnectedAsync' on hub.
+System.ArgumentNullException: Value cannot be null. (Parameter 'connectionId')
+   at Microsoft.AspNetCore.SignalR.DefaultHubLifetimeManager`1.RemoveFromGroupAsync(String connectionId, String groupName, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.SignalR.Internal.GroupManager`1.RemoveFromGroupAsync(String connectionId, String groupName, CancellationToken cancellationToken)
+   at NetCoreFrame.WebUI.Views.Hubs.SignalrHubs.OnDisconnectedAsync(Exception exception) in D:\MyPrj\2021\ESOP\代码\NetCoreFrame.WebUI\Hubs\SignalrHubs.cs:line 49
+   at Microsoft.AspNetCore.SignalR.Internal.DefaultHubDispatcher`1.OnDisconnectedAsync(HubConnectionContext connection, Exception exception)
+   at Microsoft.AspNetCore.SignalR.Internal.DefaultHubDispatcher`1.OnDisconnectedAsync(HubConnectionContext connection, Exception exception)
+   at Microsoft.AspNetCore.SignalR.HubConnectionHandler`1.HubOnDisconnectedAsync(HubConnectionContext connection, Exception exception)
+2021-08-15 20:59:52,866 [13] ERROR Microsoft.AspNetCore.Http.Connections.Internal.HttpConnectionManager - Failed disposing connection ntmFU2k2KTvV4yQsejczEA.
+System.ArgumentNullException: Value cannot be null. (Parameter 'connectionId')
+   at Microsoft.AspNetCore.SignalR.DefaultHubLifetimeManager`1.RemoveFromGroupAsync(String connectionId, String groupName, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.SignalR.Internal.GroupManager`1.RemoveFromGroupAsync(String connectionId, String groupName, CancellationToken cancellationToken)
+   at NetCoreFrame.WebUI.Views.Hubs.SignalrHubs.OnDisconnectedAsync(Exception exception) in D:\MyPrj\2021\ESOP\代码\NetCoreFrame.WebUI\Hubs\SignalrHubs.cs:line 49
+   at Microsoft.AspNetCore.SignalR.Internal.DefaultHubDispatcher`1.OnDisconnectedAsync(HubConnectionContext connection, Exception exception)
+   at Microsoft.AspNetCore.SignalR.Internal.DefaultHubDispatcher`1.OnDisconnectedAsync(HubConnectionContext connection, Exception exception)
+   at Microsoft.AspNetCore.SignalR.HubConnectionHandler`1.HubOnDisconnectedAsync(HubConnectionContext connection, Exception exception)
+   at Microsoft.AspNetCore.SignalR.HubConnectionHandler`1.RunHubAsync(HubConnectionContext connection)
+   at Microsoft.AspNetCore.SignalR.HubConnectionHandler`1.OnConnectedAsync(ConnectionContext connection)
+   at Microsoft.AspNetCore.SignalR.HubConnectionHandler`1.OnConnectedAsync(ConnectionContext connection)
+   at Microsoft.AspNetCore.Http.Connections.Internal.HttpConnectionContext.ExecuteApplication(ConnectionDelegate connectionDelegate)
+   at Microsoft.AspNetCore.Http.Connections.Internal.HttpConnectionContext.WaitOnTasks(Task applicationTask, Task transportTask, Boolean closeGracefully)
+   at Microsoft.AspNetCore.Http.Connections.Internal.HttpConnectionContext.DisposeAsync(Boolean closeGracefully)
+   at Microsoft.AspNetCore.Http.Connections.Internal.HttpConnectionManager.DisposeAndRemoveAsync(HttpConnectionContext connection, Boolean closeGracefully)
+2021-08-15 20:59:58,059 [17] ERROR Microsoft.AspNetCore.SignalR.HubConnectionHandler - Error when dispatching 'OnDisconnectedAsync' on hub.
+System.ArgumentNullException: Value cannot be null. (Parameter 'connectionId')
+   at Microsoft.AspNetCore.SignalR.DefaultHubLifetimeManager`1.RemoveFromGroupAsync(String connectionId, String groupName, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.SignalR.Internal.GroupManager`1.RemoveFromGroupAsync(String connectionId, String groupName, CancellationToken cancellationToken)
+   at NetCoreFrame.WebUI.Views.Hubs.SignalrHubs.OnDisconnectedAsync(Exception exception) in D:\MyPrj\2021\ESOP\代码\NetCoreFrame.WebUI\Hubs\SignalrHubs.cs:line 49
+   at Microsoft.AspNetCore.SignalR.Internal.DefaultHubDispatcher`1.OnDisconnectedAsync(HubConnectionContext connection, Exception exception)
+   at Microsoft.AspNetCore.SignalR.Internal.DefaultHubDispatcher`1.OnDisconnectedAsync(HubConnectionContext connection, Exception exception)
+   at Microsoft.AspNetCore.SignalR.HubConnectionHandler`1.HubOnDisconnectedAsync(HubConnectionContext connection, Exception exception)
+2021-08-15 20:59:58,063 [17] ERROR Microsoft.AspNetCore.Http.Connections.Internal.HttpConnectionManager - Failed disposing connection 3gqjLRsVQVRQUfiLYXuZ2w.
+System.ArgumentNullException: Value cannot be null. (Parameter 'connectionId')
+   at Microsoft.AspNetCore.SignalR.DefaultHubLifetimeManager`1.RemoveFromGroupAsync(String connectionId, String groupName, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.SignalR.Internal.GroupManager`1.RemoveFromGroupAsync(String connectionId, String groupName, CancellationToken cancellationToken)
+   at NetCoreFrame.WebUI.Views.Hubs.SignalrHubs.OnDisconnectedAsync(Exception exception) in D:\MyPrj\2021\ESOP\代码\NetCoreFrame.WebUI\Hubs\SignalrHubs.cs:line 49
+   at Microsoft.AspNetCore.SignalR.Internal.DefaultHubDispatcher`1.OnDisconnectedAsync(HubConnectionContext connection, Exception exception)
+   at Microsoft.AspNetCore.SignalR.Internal.DefaultHubDispatcher`1.OnDisconnectedAsync(HubConnectionContext connection, Exception exception)
+   at Microsoft.AspNetCore.SignalR.HubConnectionHandler`1.HubOnDisconnectedAsync(HubConnectionContext connection, Exception exception)
+   at Microsoft.AspNetCore.SignalR.HubConnectionHandler`1.RunHubAsync(HubConnectionContext connection)
+   at Microsoft.AspNetCore.SignalR.HubConnectionHandler`1.OnConnectedAsync(ConnectionContext connection)
+   at Microsoft.AspNetCore.SignalR.HubConnectionHandler`1.OnConnectedAsync(ConnectionContext connection)
+   at Microsoft.AspNetCore.Http.Connections.Internal.HttpConnectionContext.ExecuteApplication(ConnectionDelegate connectionDelegate)
+   at Microsoft.AspNetCore.Http.Connections.Internal.HttpConnectionContext.WaitOnTasks(Task applicationTask, Task transportTask, Boolean closeGracefully)
+   at Microsoft.AspNetCore.Http.Connections.Internal.HttpConnectionContext.DisposeAsync(Boolean closeGracefully)
+   at Microsoft.AspNetCore.Http.Connections.Internal.HttpConnectionManager.DisposeAndRemoveAsync(HttpConnectionContext connection, Boolean closeGracefully)
+2021-08-15 21:00:52,934 [8] ERROR NetCoreFrame.WebUI.Filter.HttpGlobalExceptionFilter - --------FrameRelations/LoadRoleMenu Error Begin--------
+2021-08-15 21:00:52,940 [8] ERROR NetCoreFrame.WebUI.Filter.HttpGlobalExceptionFilter -   Error Detail:Object reference not set to an instance of an object.
+2021-08-15 21:00:52,942 [8] ERROR NetCoreFrame.WebUI.Filter.HttpGlobalExceptionFilter - --------FrameRelations/LoadRoleMenu Error End--------
+2021-08-15 21:00:52,977 [11] ERROR Microsoft.AspNetCore.SignalR.HubConnectionHandler - Error when dispatching 'OnConnectedAsync' on hub.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at NetCoreFrame.WebUI.Extensions.CurrentUser.get__session() in D:\MyPrj\2021\ESOP\代码\NetCoreFrame.WebUI\Extensions\CurrentUser.cs:line 19
+   at NetCoreFrame.WebUI.Extensions.CurrentUser.get_UserName() in D:\MyPrj\2021\ESOP\代码\NetCoreFrame.WebUI\Extensions\CurrentUser.cs:line 41
+   at NetCoreFrame.WebUI.Views.Hubs.SignalrHubs.OnConnectedAsync() in D:\MyPrj\2021\ESOP\代码\NetCoreFrame.WebUI\Hubs\SignalrHubs.cs:line 22
+   at Microsoft.AspNetCore.SignalR.Internal.DefaultHubDispatcher`1.OnConnectedAsync(HubConnectionContext connection)
+   at Microsoft.AspNetCore.SignalR.Internal.DefaultHubDispatcher`1.OnConnectedAsync(HubConnectionContext connection)
+   at Microsoft.AspNetCore.SignalR.HubConnectionHandler`1.RunHubAsync(HubConnectionContext connection)
+2021-08-15 21:02:03,799 [11] ERROR Microsoft.AspNetCore.SignalR.HubConnectionHandler - Error when dispatching 'OnDisconnectedAsync' on hub.
+System.ArgumentNullException: Value cannot be null. (Parameter 'connectionId')
+   at Microsoft.AspNetCore.SignalR.DefaultHubLifetimeManager`1.RemoveFromGroupAsync(String connectionId, String groupName, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.SignalR.Internal.GroupManager`1.RemoveFromGroupAsync(String connectionId, String groupName, CancellationToken cancellationToken)
+   at NetCoreFrame.WebUI.Views.Hubs.SignalrHubs.OnDisconnectedAsync(Exception exception) in D:\MyPrj\2021\ESOP\代码\NetCoreFrame.WebUI\Hubs\SignalrHubs.cs:line 49
+   at Microsoft.AspNetCore.SignalR.Internal.DefaultHubDispatcher`1.OnDisconnectedAsync(HubConnectionContext connection, Exception exception)
+   at Microsoft.AspNetCore.SignalR.Internal.DefaultHubDispatcher`1.OnDisconnectedAsync(HubConnectionContext connection, Exception exception)
+   at Microsoft.AspNetCore.SignalR.HubConnectionHandler`1.HubOnDisconnectedAsync(HubConnectionContext connection, Exception exception)
+2021-08-15 21:02:03,808 [11] ERROR Microsoft.AspNetCore.Http.Connections.Internal.HttpConnectionManager - Failed disposing connection mebECWINU5du9TwK172XrQ.
+System.ArgumentNullException: Value cannot be null. (Parameter 'connectionId')
+   at Microsoft.AspNetCore.SignalR.DefaultHubLifetimeManager`1.RemoveFromGroupAsync(String connectionId, String groupName, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.SignalR.Internal.GroupManager`1.RemoveFromGroupAsync(String connectionId, String groupName, CancellationToken cancellationToken)
+   at NetCoreFrame.WebUI.Views.Hubs.SignalrHubs.OnDisconnectedAsync(Exception exception) in D:\MyPrj\2021\ESOP\代码\NetCoreFrame.WebUI\Hubs\SignalrHubs.cs:line 49
+   at Microsoft.AspNetCore.SignalR.Internal.DefaultHubDispatcher`1.OnDisconnectedAsync(HubConnectionContext connection, Exception exception)
+   at Microsoft.AspNetCore.SignalR.Internal.DefaultHubDispatcher`1.OnDisconnectedAsync(HubConnectionContext connection, Exception exception)
+   at Microsoft.AspNetCore.SignalR.HubConnectionHandler`1.HubOnDisconnectedAsync(HubConnectionContext connection, Exception exception)
+   at Microsoft.AspNetCore.SignalR.HubConnectionHandler`1.RunHubAsync(HubConnectionContext connection)
+   at Microsoft.AspNetCore.SignalR.HubConnectionHandler`1.OnConnectedAsync(ConnectionContext connection)
+   at Microsoft.AspNetCore.SignalR.HubConnectionHandler`1.OnConnectedAsync(ConnectionContext connection)
+   at Microsoft.AspNetCore.Http.Connections.Internal.HttpConnectionContext.ExecuteApplication(ConnectionDelegate connectionDelegate)
+   at Microsoft.AspNetCore.Http.Connections.Internal.HttpConnectionContext.WaitOnTasks(Task applicationTask, Task transportTask, Boolean closeGracefully)
+   at Microsoft.AspNetCore.Http.Connections.Internal.HttpConnectionContext.DisposeAsync(Boolean closeGracefully)
+   at Microsoft.AspNetCore.Http.Connections.Internal.HttpConnectionManager.DisposeAndRemoveAsync(HttpConnectionContext connection, Boolean closeGracefully)
+2021-08-15 21:17:13,342 [12] ERROR NetCoreFrame.WebUI.Filter.HttpGlobalExceptionFilter - --------Home/Index Error Begin--------
+2021-08-15 21:17:13,348 [12] ERROR NetCoreFrame.WebUI.Filter.HttpGlobalExceptionFilter -   Error Detail:Object reference not set to an instance of an object.
+2021-08-15 21:17:13,349 [12] ERROR NetCoreFrame.WebUI.Filter.HttpGlobalExceptionFilter - --------Home/Index Error End--------
+2021-08-15 21:21:27,463 [8] ERROR NetCoreFrame.WebUI.Filter.HttpGlobalExceptionFilter - --------FrameRelations/LoadRoleMenu Error Begin--------
+2021-08-15 21:21:27,469 [8] ERROR NetCoreFrame.WebUI.Filter.HttpGlobalExceptionFilter -   Error Detail:Object reference not set to an instance of an object.
+2021-08-15 21:21:27,472 [8] ERROR NetCoreFrame.WebUI.Filter.HttpGlobalExceptionFilter - --------FrameRelations/LoadRoleMenu Error End--------
+2021-08-15 21:22:40,943 [10] ERROR Microsoft.AspNetCore.SignalR.HubConnectionHandler - Error when dispatching 'OnConnectedAsync' on hub.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at NetCoreFrame.WebUI.Extensions.CurrentUser.get__session() in D:\MyPrj\2021\ESOP\代码\NetCoreFrame.WebUI\Extensions\CurrentUser.cs:line 19
+   at NetCoreFrame.WebUI.Extensions.CurrentUser.get_UserName() in D:\MyPrj\2021\ESOP\代码\NetCoreFrame.WebUI\Extensions\CurrentUser.cs:line 41
+   at NetCoreFrame.WebUI.Views.Hubs.SignalrHubs.OnConnectedAsync() in D:\MyPrj\2021\ESOP\代码\NetCoreFrame.WebUI\Hubs\SignalrHubs.cs:line 21
+   at Microsoft.AspNetCore.SignalR.Internal.DefaultHubDispatcher`1.OnConnectedAsync(HubConnectionContext connection)
+   at Microsoft.AspNetCore.SignalR.Internal.DefaultHubDispatcher`1.OnConnectedAsync(HubConnectionContext connection)
+   at Microsoft.AspNetCore.SignalR.HubConnectionHandler`1.RunHubAsync(HubConnectionContext connection)
+2021-08-15 21:22:40,956 [6] ERROR NetCoreFrame.WebUI.Filter.HttpGlobalExceptionFilter - --------FrameRelations/LoadRoleMenu Error Begin--------
+2021-08-15 21:22:40,957 [6] ERROR NetCoreFrame.WebUI.Filter.HttpGlobalExceptionFilter -   Error Detail:Object reference not set to an instance of an object.
+2021-08-15 21:22:40,958 [6] ERROR NetCoreFrame.WebUI.Filter.HttpGlobalExceptionFilter - --------FrameRelations/LoadRoleMenu Error End--------
+2021-08-15 21:23:47,035 [9] ERROR Microsoft.AspNetCore.SignalR.HubConnectionHandler - Error when dispatching 'OnDisconnectedAsync' on hub.
+System.ArgumentNullException: Value cannot be null. (Parameter 'connectionId')
+   at Microsoft.AspNetCore.SignalR.DefaultHubLifetimeManager`1.RemoveFromGroupAsync(String connectionId, String groupName, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.SignalR.Internal.GroupManager`1.RemoveFromGroupAsync(String connectionId, String groupName, CancellationToken cancellationToken)
+   at NetCoreFrame.WebUI.Views.Hubs.SignalrHubs.OnDisconnectedAsync(Exception exception) in D:\MyPrj\2021\ESOP\代码\NetCoreFrame.WebUI\Hubs\SignalrHubs.cs:line 41
+   at Microsoft.AspNetCore.SignalR.Internal.DefaultHubDispatcher`1.OnDisconnectedAsync(HubConnectionContext connection, Exception exception)
+   at Microsoft.AspNetCore.SignalR.Internal.DefaultHubDispatcher`1.OnDisconnectedAsync(HubConnectionContext connection, Exception exception)
+   at Microsoft.AspNetCore.SignalR.HubConnectionHandler`1.HubOnDisconnectedAsync(HubConnectionContext connection, Exception exception)
+2021-08-15 21:23:47,051 [9] ERROR Microsoft.AspNetCore.Http.Connections.Internal.HttpConnectionManager - Failed disposing connection PlPHXh2v8edJuAQJUoRALg.
+System.ArgumentNullException: Value cannot be null. (Parameter 'connectionId')
+   at Microsoft.AspNetCore.SignalR.DefaultHubLifetimeManager`1.RemoveFromGroupAsync(String connectionId, String groupName, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.SignalR.Internal.GroupManager`1.RemoveFromGroupAsync(String connectionId, String groupName, CancellationToken cancellationToken)
+   at NetCoreFrame.WebUI.Views.Hubs.SignalrHubs.OnDisconnectedAsync(Exception exception) in D:\MyPrj\2021\ESOP\代码\NetCoreFrame.WebUI\Hubs\SignalrHubs.cs:line 41
+   at Microsoft.AspNetCore.SignalR.Internal.DefaultHubDispatcher`1.OnDisconnectedAsync(HubConnectionContext connection, Exception exception)
+   at Microsoft.AspNetCore.SignalR.Internal.DefaultHubDispatcher`1.OnDisconnectedAsync(HubConnectionContext connection, Exception exception)
+   at Microsoft.AspNetCore.SignalR.HubConnectionHandler`1.HubOnDisconnectedAsync(HubConnectionContext connection, Exception exception)
+   at Microsoft.AspNetCore.SignalR.HubConnectionHandler`1.RunHubAsync(HubConnectionContext connection)
+   at Microsoft.AspNetCore.SignalR.HubConnectionHandler`1.OnConnectedAsync(ConnectionContext connection)
+   at Microsoft.AspNetCore.SignalR.HubConnectionHandler`1.OnConnectedAsync(ConnectionContext connection)
+   at Microsoft.AspNetCore.Http.Connections.Internal.HttpConnectionContext.ExecuteApplication(ConnectionDelegate connectionDelegate)
+   at Microsoft.AspNetCore.Http.Connections.Internal.HttpConnectionContext.WaitOnTasks(Task applicationTask, Task transportTask, Boolean closeGracefully)
+   at Microsoft.AspNetCore.Http.Connections.Internal.HttpConnectionContext.DisposeAsync(Boolean closeGracefully)
+   at Microsoft.AspNetCore.Http.Connections.Internal.HttpConnectionManager.DisposeAndRemoveAsync(HttpConnectionContext connection, Boolean closeGracefully)
+2021-08-15 21:24:09,883 [17] ERROR Microsoft.AspNetCore.SignalR.HubConnectionHandler - Error when dispatching 'OnDisconnectedAsync' on hub.
+System.ArgumentNullException: Value cannot be null. (Parameter 'connectionId')
+   at Microsoft.AspNetCore.SignalR.DefaultHubLifetimeManager`1.RemoveFromGroupAsync(String connectionId, String groupName, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.SignalR.Internal.GroupManager`1.RemoveFromGroupAsync(String connectionId, String groupName, CancellationToken cancellationToken)
+   at NetCoreFrame.WebUI.Views.Hubs.SignalrHubs.OnDisconnectedAsync(Exception exception) in D:\MyPrj\2021\ESOP\代码\NetCoreFrame.WebUI\Hubs\SignalrHubs.cs:line 41
+   at Microsoft.AspNetCore.SignalR.Internal.DefaultHubDispatcher`1.OnDisconnectedAsync(HubConnectionContext connection, Exception exception)
+   at Microsoft.AspNetCore.SignalR.Internal.DefaultHubDispatcher`1.OnDisconnectedAsync(HubConnectionContext connection, Exception exception)
+   at Microsoft.AspNetCore.SignalR.HubConnectionHandler`1.HubOnDisconnectedAsync(HubConnectionContext connection, Exception exception)
+2021-08-15 21:24:09,891 [17] ERROR Microsoft.AspNetCore.Http.Connections.Internal.HttpConnectionManager - Failed disposing connection U8Ul5qyEBZbK9PAYwpnOgA.
+System.ArgumentNullException: Value cannot be null. (Parameter 'connectionId')
+   at Microsoft.AspNetCore.SignalR.DefaultHubLifetimeManager`1.RemoveFromGroupAsync(String connectionId, String groupName, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.SignalR.Internal.GroupManager`1.RemoveFromGroupAsync(String connectionId, String groupName, CancellationToken cancellationToken)
+   at NetCoreFrame.WebUI.Views.Hubs.SignalrHubs.OnDisconnectedAsync(Exception exception) in D:\MyPrj\2021\ESOP\代码\NetCoreFrame.WebUI\Hubs\SignalrHubs.cs:line 41
+   at Microsoft.AspNetCore.SignalR.Internal.DefaultHubDispatcher`1.OnDisconnectedAsync(HubConnectionContext connection, Exception exception)
+   at Microsoft.AspNetCore.SignalR.Internal.DefaultHubDispatcher`1.OnDisconnectedAsync(HubConnectionContext connection, Exception exception)
+   at Microsoft.AspNetCore.SignalR.HubConnectionHandler`1.HubOnDisconnectedAsync(HubConnectionContext connection, Exception exception)
+   at Microsoft.AspNetCore.SignalR.HubConnectionHandler`1.RunHubAsync(HubConnectionContext connection)
+   at Microsoft.AspNetCore.SignalR.HubConnectionHandler`1.OnConnectedAsync(ConnectionContext connection)
+   at Microsoft.AspNetCore.SignalR.HubConnectionHandler`1.OnConnectedAsync(ConnectionContext connection)
+   at Microsoft.AspNetCore.Http.Connections.Internal.HttpConnectionContext.ExecuteApplication(ConnectionDelegate connectionDelegate)
+   at Microsoft.AspNetCore.Http.Connections.Internal.HttpConnectionContext.WaitOnTasks(Task applicationTask, Task transportTask, Boolean closeGracefully)
+   at Microsoft.AspNetCore.Http.Connections.Internal.HttpConnectionContext.DisposeAsync(Boolean closeGracefully)
+   at Microsoft.AspNetCore.Http.Connections.Internal.HttpConnectionManager.DisposeAndRemoveAsync(HttpConnectionContext connection, Boolean closeGracefully)
+2021-08-15 21:24:13,761 [11] ERROR Microsoft.AspNetCore.SignalR.HubConnectionHandler - Error when dispatching 'OnDisconnectedAsync' on hub.
+System.ArgumentNullException: Value cannot be null. (Parameter 'connectionId')
+   at Microsoft.AspNetCore.SignalR.DefaultHubLifetimeManager`1.RemoveFromGroupAsync(String connectionId, String groupName, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.SignalR.Internal.GroupManager`1.RemoveFromGroupAsync(String connectionId, String groupName, CancellationToken cancellationToken)
+   at NetCoreFrame.WebUI.Views.Hubs.SignalrHubs.OnDisconnectedAsync(Exception exception) in D:\MyPrj\2021\ESOP\代码\NetCoreFrame.WebUI\Hubs\SignalrHubs.cs:line 41
+   at Microsoft.AspNetCore.SignalR.Internal.DefaultHubDispatcher`1.OnDisconnectedAsync(HubConnectionContext connection, Exception exception)
+   at Microsoft.AspNetCore.SignalR.Internal.DefaultHubDispatcher`1.OnDisconnectedAsync(HubConnectionContext connection, Exception exception)
+   at Microsoft.AspNetCore.SignalR.HubConnectionHandler`1.HubOnDisconnectedAsync(HubConnectionContext connection, Exception exception)
+2021-08-15 21:24:13,764 [11] ERROR Microsoft.AspNetCore.Http.Connections.Internal.HttpConnectionManager - Failed disposing connection qrS1A5Q2GiLBxU2dvmbTKQ.
+System.ArgumentNullException: Value cannot be null. (Parameter 'connectionId')
+   at Microsoft.AspNetCore.SignalR.DefaultHubLifetimeManager`1.RemoveFromGroupAsync(String connectionId, String groupName, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.SignalR.Internal.GroupManager`1.RemoveFromGroupAsync(String connectionId, String groupName, CancellationToken cancellationToken)
+   at NetCoreFrame.WebUI.Views.Hubs.SignalrHubs.OnDisconnectedAsync(Exception exception) in D:\MyPrj\2021\ESOP\代码\NetCoreFrame.WebUI\Hubs\SignalrHubs.cs:line 41
+   at Microsoft.AspNetCore.SignalR.Internal.DefaultHubDispatcher`1.OnDisconnectedAsync(HubConnectionContext connection, Exception exception)
+   at Microsoft.AspNetCore.SignalR.Internal.DefaultHubDispatcher`1.OnDisconnectedAsync(HubConnectionContext connection, Exception exception)
+   at Microsoft.AspNetCore.SignalR.HubConnectionHandler`1.HubOnDisconnectedAsync(HubConnectionContext connection, Exception exception)
+   at Microsoft.AspNetCore.SignalR.HubConnectionHandler`1.RunHubAsync(HubConnectionContext connection)
+   at Microsoft.AspNetCore.SignalR.HubConnectionHandler`1.OnConnectedAsync(ConnectionContext connection)
+   at Microsoft.AspNetCore.SignalR.HubConnectionHandler`1.OnConnectedAsync(ConnectionContext connection)
+   at Microsoft.AspNetCore.Http.Connections.Internal.HttpConnectionContext.ExecuteApplication(ConnectionDelegate connectionDelegate)
+   at Microsoft.AspNetCore.Http.Connections.Internal.HttpConnectionContext.WaitOnTasks(Task applicationTask, Task transportTask, Boolean closeGracefully)
+   at Microsoft.AspNetCore.Http.Connections.Internal.HttpConnectionContext.DisposeAsync(Boolean closeGracefully)
+   at Microsoft.AspNetCore.Http.Connections.Internal.HttpConnectionManager.DisposeAndRemoveAsync(HttpConnectionContext connection, Boolean closeGracefully)
+2021-08-15 21:24:13,764 [6] ERROR Microsoft.AspNetCore.Http.Connections.Internal.HttpConnectionManager - Failed disposing connection qrS1A5Q2GiLBxU2dvmbTKQ.
+System.ArgumentNullException: Value cannot be null. (Parameter 'connectionId')
+   at Microsoft.AspNetCore.SignalR.DefaultHubLifetimeManager`1.RemoveFromGroupAsync(String connectionId, String groupName, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.SignalR.Internal.GroupManager`1.RemoveFromGroupAsync(String connectionId, String groupName, CancellationToken cancellationToken)
+   at NetCoreFrame.WebUI.Views.Hubs.SignalrHubs.OnDisconnectedAsync(Exception exception) in D:\MyPrj\2021\ESOP\代码\NetCoreFrame.WebUI\Hubs\SignalrHubs.cs:line 41
+   at Microsoft.AspNetCore.SignalR.Internal.DefaultHubDispatcher`1.OnDisconnectedAsync(HubConnectionContext connection, Exception exception)
+   at Microsoft.AspNetCore.SignalR.Internal.DefaultHubDispatcher`1.OnDisconnectedAsync(HubConnectionContext connection, Exception exception)
+   at Microsoft.AspNetCore.SignalR.HubConnectionHandler`1.HubOnDisconnectedAsync(HubConnectionContext connection, Exception exception)
+   at Microsoft.AspNetCore.SignalR.HubConnectionHandler`1.RunHubAsync(HubConnectionContext connection)
+   at Microsoft.AspNetCore.SignalR.HubConnectionHandler`1.OnConnectedAsync(ConnectionContext connection)
+   at Microsoft.AspNetCore.SignalR.HubConnectionHandler`1.OnConnectedAsync(ConnectionContext connection)
+   at Microsoft.AspNetCore.Http.Connections.Internal.HttpConnectionContext.ExecuteApplication(ConnectionDelegate connectionDelegate)
+   at Microsoft.AspNetCore.Http.Connections.Internal.HttpConnectionContext.WaitOnTasks(Task applicationTask, Task transportTask, Boolean closeGracefully)
+   at Microsoft.AspNetCore.Http.Connections.Internal.HttpConnectionContext.DisposeAsync(Boolean closeGracefully)
+   at Microsoft.AspNetCore.Http.Connections.Internal.HttpConnectionManager.DisposeAndRemoveAsync(HttpConnectionContext connection, Boolean closeGracefully)
+2021-08-15 21:26:03,107 [9] ERROR Microsoft.AspNetCore.SignalR.HubConnectionHandler - Error when dispatching 'OnDisconnectedAsync' on hub.
+System.ArgumentNullException: Value cannot be null. (Parameter 'connectionId')
+   at Microsoft.AspNetCore.SignalR.DefaultHubLifetimeManager`1.RemoveFromGroupAsync(String connectionId, String groupName, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.SignalR.Internal.GroupManager`1.RemoveFromGroupAsync(String connectionId, String groupName, CancellationToken cancellationToken)
+   at NetCoreFrame.WebUI.Views.Hubs.SignalrHubs.OnDisconnectedAsync(Exception exception) in D:\MyPrj\2021\ESOP\代码\NetCoreFrame.WebUI\Hubs\SignalrHubs.cs:line 41
+   at Microsoft.AspNetCore.SignalR.Internal.DefaultHubDispatcher`1.OnDisconnectedAsync(HubConnectionContext connection, Exception exception)
+   at Microsoft.AspNetCore.SignalR.Internal.DefaultHubDispatcher`1.OnDisconnectedAsync(HubConnectionContext connection, Exception exception)
+   at Microsoft.AspNetCore.SignalR.HubConnectionHandler`1.HubOnDisconnectedAsync(HubConnectionContext connection, Exception exception)
+2021-08-15 21:26:03,120 [9] ERROR Microsoft.AspNetCore.Http.Connections.Internal.HttpConnectionManager - Failed disposing connection kcZEBO-9WmDNRyFiaNhiZQ.
+System.ArgumentNullException: Value cannot be null. (Parameter 'connectionId')
+   at Microsoft.AspNetCore.SignalR.DefaultHubLifetimeManager`1.RemoveFromGroupAsync(String connectionId, String groupName, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.SignalR.Internal.GroupManager`1.RemoveFromGroupAsync(String connectionId, String groupName, CancellationToken cancellationToken)
+   at NetCoreFrame.WebUI.Views.Hubs.SignalrHubs.OnDisconnectedAsync(Exception exception) in D:\MyPrj\2021\ESOP\代码\NetCoreFrame.WebUI\Hubs\SignalrHubs.cs:line 41
+   at Microsoft.AspNetCore.SignalR.Internal.DefaultHubDispatcher`1.OnDisconnectedAsync(HubConnectionContext connection, Exception exception)
+   at Microsoft.AspNetCore.SignalR.Internal.DefaultHubDispatcher`1.OnDisconnectedAsync(HubConnectionContext connection, Exception exception)
+   at Microsoft.AspNetCore.SignalR.HubConnectionHandler`1.HubOnDisconnectedAsync(HubConnectionContext connection, Exception exception)
+   at Microsoft.AspNetCore.SignalR.HubConnectionHandler`1.RunHubAsync(HubConnectionContext connection)
+   at Microsoft.AspNetCore.SignalR.HubConnectionHandler`1.OnConnectedAsync(ConnectionContext connection)
+   at Microsoft.AspNetCore.SignalR.HubConnectionHandler`1.OnConnectedAsync(ConnectionContext connection)
+   at Microsoft.AspNetCore.Http.Connections.Internal.HttpConnectionContext.ExecuteApplication(ConnectionDelegate connectionDelegate)
+   at Microsoft.AspNetCore.Http.Connections.Internal.HttpConnectionContext.WaitOnTasks(Task applicationTask, Task transportTask, Boolean closeGracefully)
+   at Microsoft.AspNetCore.Http.Connections.Internal.HttpConnectionContext.DisposeAsync(Boolean closeGracefully)
+   at Microsoft.AspNetCore.Http.Connections.Internal.HttpConnectionContext.DisposeAsync(Boolean closeGracefully)
+   at Microsoft.AspNetCore.Http.Connections.Internal.HttpConnectionManager.DisposeAndRemoveAsync(HttpConnectionContext connection, Boolean closeGracefully)
+2021-08-15 21:26:03,120 [14] ERROR Microsoft.AspNetCore.Http.Connections.Internal.HttpConnectionManager - Failed disposing connection kcZEBO-9WmDNRyFiaNhiZQ.
+System.ArgumentNullException: Value cannot be null. (Parameter 'connectionId')
+   at Microsoft.AspNetCore.SignalR.DefaultHubLifetimeManager`1.RemoveFromGroupAsync(String connectionId, String groupName, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.SignalR.Internal.GroupManager`1.RemoveFromGroupAsync(String connectionId, String groupName, CancellationToken cancellationToken)
+   at NetCoreFrame.WebUI.Views.Hubs.SignalrHubs.OnDisconnectedAsync(Exception exception) in D:\MyPrj\2021\ESOP\代码\NetCoreFrame.WebUI\Hubs\SignalrHubs.cs:line 41
+   at Microsoft.AspNetCore.SignalR.Internal.DefaultHubDispatcher`1.OnDisconnectedAsync(HubConnectionContext connection, Exception exception)
+   at Microsoft.AspNetCore.SignalR.Internal.DefaultHubDispatcher`1.OnDisconnectedAsync(HubConnectionContext connection, Exception exception)
+   at Microsoft.AspNetCore.SignalR.HubConnectionHandler`1.HubOnDisconnectedAsync(HubConnectionContext connection, Exception exception)
+   at Microsoft.AspNetCore.SignalR.HubConnectionHandler`1.RunHubAsync(HubConnectionContext connection)
+   at Microsoft.AspNetCore.SignalR.HubConnectionHandler`1.OnConnectedAsync(ConnectionContext connection)
+   at Microsoft.AspNetCore.SignalR.HubConnectionHandler`1.OnConnectedAsync(ConnectionContext connection)
+   at Microsoft.AspNetCore.Http.Connections.Internal.HttpConnectionContext.ExecuteApplication(ConnectionDelegate connectionDelegate)
+   at Microsoft.AspNetCore.Http.Connections.Internal.HttpConnectionContext.WaitOnTasks(Task applicationTask, Task transportTask, Boolean closeGracefully)
+   at Microsoft.AspNetCore.Http.Connections.Internal.HttpConnectionContext.DisposeAsync(Boolean closeGracefully)
+   at Microsoft.AspNetCore.Http.Connections.Internal.HttpConnectionContext.DisposeAsync(Boolean closeGracefully)
+   at Microsoft.AspNetCore.Http.Connections.Internal.HttpConnectionManager.DisposeAndRemoveAsync(HttpConnectionContext connection, Boolean closeGracefully)
+2021-08-15 21:31:06,497 [6] ERROR Microsoft.AspNetCore.SignalR.HubConnectionHandler - Error when dispatching 'OnDisconnectedAsync' on hub.
+System.ArgumentNullException: Value cannot be null. (Parameter 'connectionId')
+   at Microsoft.AspNetCore.SignalR.DefaultHubLifetimeManager`1.RemoveFromGroupAsync(String connectionId, String groupName, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.SignalR.Internal.GroupManager`1.RemoveFromGroupAsync(String connectionId, String groupName, CancellationToken cancellationToken)
+   at NetCoreFrame.WebUI.Views.Hubs.SignalrHubs.OnDisconnectedAsync(Exception exception) in D:\MyPrj\2021\ESOP\代码\NetCoreFrame.WebUI\Hubs\SignalrHubs.cs:line 41
+   at Microsoft.AspNetCore.SignalR.Internal.DefaultHubDispatcher`1.OnDisconnectedAsync(HubConnectionContext connection, Exception exception)
+   at Microsoft.AspNetCore.SignalR.Internal.DefaultHubDispatcher`1.OnDisconnectedAsync(HubConnectionContext connection, Exception exception)
+   at Microsoft.AspNetCore.SignalR.HubConnectionHandler`1.HubOnDisconnectedAsync(HubConnectionContext connection, Exception exception)
+2021-08-15 21:31:06,513 [6] ERROR Microsoft.AspNetCore.Http.Connections.Internal.HttpConnectionManager - Failed disposing connection WO_9HImBNg_BW7LSIkehtA.
+System.ArgumentNullException: Value cannot be null. (Parameter 'connectionId')
+   at Microsoft.AspNetCore.SignalR.DefaultHubLifetimeManager`1.RemoveFromGroupAsync(String connectionId, String groupName, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.SignalR.Internal.GroupManager`1.RemoveFromGroupAsync(String connectionId, String groupName, CancellationToken cancellationToken)
+   at NetCoreFrame.WebUI.Views.Hubs.SignalrHubs.OnDisconnectedAsync(Exception exception) in D:\MyPrj\2021\ESOP\代码\NetCoreFrame.WebUI\Hubs\SignalrHubs.cs:line 41
+   at Microsoft.AspNetCore.SignalR.Internal.DefaultHubDispatcher`1.OnDisconnectedAsync(HubConnectionContext connection, Exception exception)
+   at Microsoft.AspNetCore.SignalR.Internal.DefaultHubDispatcher`1.OnDisconnectedAsync(HubConnectionContext connection, Exception exception)
+   at Microsoft.AspNetCore.SignalR.HubConnectionHandler`1.HubOnDisconnectedAsync(HubConnectionContext connection, Exception exception)
+   at Microsoft.AspNetCore.SignalR.HubConnectionHandler`1.RunHubAsync(HubConnectionContext connection)
+   at Microsoft.AspNetCore.SignalR.HubConnectionHandler`1.OnConnectedAsync(ConnectionContext connection)
+   at Microsoft.AspNetCore.SignalR.HubConnectionHandler`1.OnConnectedAsync(ConnectionContext connection)
+   at Microsoft.AspNetCore.Http.Connections.Internal.HttpConnectionContext.ExecuteApplication(ConnectionDelegate connectionDelegate)
+   at Microsoft.AspNetCore.Http.Connections.Internal.HttpConnectionContext.WaitOnTasks(Task applicationTask, Task transportTask, Boolean closeGracefully)
+   at Microsoft.AspNetCore.Http.Connections.Internal.HttpConnectionContext.DisposeAsync(Boolean closeGracefully)
+   at Microsoft.AspNetCore.Http.Connections.Internal.HttpConnectionManager.DisposeAndRemoveAsync(HttpConnectionContext connection, Boolean closeGracefully)
+2021-08-15 21:31:10,963 [8] ERROR Microsoft.AspNetCore.SignalR.HubConnectionHandler - Error when dispatching 'OnDisconnectedAsync' on hub.
+System.ArgumentNullException: Value cannot be null. (Parameter 'connectionId')
+   at Microsoft.AspNetCore.SignalR.DefaultHubLifetimeManager`1.RemoveFromGroupAsync(String connectionId, String groupName, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.SignalR.Internal.GroupManager`1.RemoveFromGroupAsync(String connectionId, String groupName, CancellationToken cancellationToken)
+   at NetCoreFrame.WebUI.Views.Hubs.SignalrHubs.OnDisconnectedAsync(Exception exception) in D:\MyPrj\2021\ESOP\代码\NetCoreFrame.WebUI\Hubs\SignalrHubs.cs:line 41
+   at Microsoft.AspNetCore.SignalR.Internal.DefaultHubDispatcher`1.OnDisconnectedAsync(HubConnectionContext connection, Exception exception)
+   at Microsoft.AspNetCore.SignalR.Internal.DefaultHubDispatcher`1.OnDisconnectedAsync(HubConnectionContext connection, Exception exception)
+   at Microsoft.AspNetCore.SignalR.HubConnectionHandler`1.HubOnDisconnectedAsync(HubConnectionContext connection, Exception exception)
+2021-08-15 21:31:10,968 [8] ERROR Microsoft.AspNetCore.Http.Connections.Internal.HttpConnectionManager - Failed disposing connection f0mUUfPnARDj_PvFBMlBKw.
+System.ArgumentNullException: Value cannot be null. (Parameter 'connectionId')
+   at Microsoft.AspNetCore.SignalR.DefaultHubLifetimeManager`1.RemoveFromGroupAsync(String connectionId, String groupName, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.SignalR.Internal.GroupManager`1.RemoveFromGroupAsync(String connectionId, String groupName, CancellationToken cancellationToken)
+   at NetCoreFrame.WebUI.Views.Hubs.SignalrHubs.OnDisconnectedAsync(Exception exception) in D:\MyPrj\2021\ESOP\代码\NetCoreFrame.WebUI\Hubs\SignalrHubs.cs:line 41
+   at Microsoft.AspNetCore.SignalR.Internal.DefaultHubDispatcher`1.OnDisconnectedAsync(HubConnectionContext connection, Exception exception)
+   at Microsoft.AspNetCore.SignalR.Internal.DefaultHubDispatcher`1.OnDisconnectedAsync(HubConnectionContext connection, Exception exception)
+   at Microsoft.AspNetCore.SignalR.HubConnectionHandler`1.HubOnDisconnectedAsync(HubConnectionContext connection, Exception exception)
+   at Microsoft.AspNetCore.SignalR.HubConnectionHandler`1.RunHubAsync(HubConnectionContext connection)
+   at Microsoft.AspNetCore.SignalR.HubConnectionHandler`1.OnConnectedAsync(ConnectionContext connection)
+   at Microsoft.AspNetCore.SignalR.HubConnectionHandler`1.OnConnectedAsync(ConnectionContext connection)
+   at Microsoft.AspNetCore.Http.Connections.Internal.HttpConnectionContext.ExecuteApplication(ConnectionDelegate connectionDelegate)
+   at Microsoft.AspNetCore.Http.Connections.Internal.HttpConnectionContext.WaitOnTasks(Task applicationTask, Task transportTask, Boolean closeGracefully)
+   at Microsoft.AspNetCore.Http.Connections.Internal.HttpConnectionContext.DisposeAsync(Boolean closeGracefully)
+   at Microsoft.AspNetCore.Http.Connections.Internal.HttpConnectionManager.DisposeAndRemoveAsync(HttpConnectionContext connection, Boolean closeGracefully)
+2021-08-15 21:31:11,158 [9] ERROR Microsoft.AspNetCore.SignalR.HubConnectionHandler - Error when dispatching 'OnDisconnectedAsync' on hub.
+System.ArgumentNullException: Value cannot be null. (Parameter 'connectionId')
+   at Microsoft.AspNetCore.SignalR.DefaultHubLifetimeManager`1.RemoveFromGroupAsync(String connectionId, String groupName, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.SignalR.Internal.GroupManager`1.RemoveFromGroupAsync(String connectionId, String groupName, CancellationToken cancellationToken)
+   at NetCoreFrame.WebUI.Views.Hubs.SignalrHubs.OnDisconnectedAsync(Exception exception) in D:\MyPrj\2021\ESOP\代码\NetCoreFrame.WebUI\Hubs\SignalrHubs.cs:line 41
+   at Microsoft.AspNetCore.SignalR.Internal.DefaultHubDispatcher`1.OnDisconnectedAsync(HubConnectionContext connection, Exception exception)
+   at Microsoft.AspNetCore.SignalR.Internal.DefaultHubDispatcher`1.OnDisconnectedAsync(HubConnectionContext connection, Exception exception)
+   at Microsoft.AspNetCore.SignalR.HubConnectionHandler`1.HubOnDisconnectedAsync(HubConnectionContext connection, Exception exception)
+2021-08-15 21:31:11,161 [9] ERROR Microsoft.AspNetCore.Http.Connections.Internal.HttpConnectionManager - Failed disposing connection CHeWLUPj6X0JFsoi2XFoPQ.
+System.ArgumentNullException: Value cannot be null. (Parameter 'connectionId')
+   at Microsoft.AspNetCore.SignalR.DefaultHubLifetimeManager`1.RemoveFromGroupAsync(String connectionId, String groupName, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.SignalR.Internal.GroupManager`1.RemoveFromGroupAsync(String connectionId, String groupName, CancellationToken cancellationToken)
+   at NetCoreFrame.WebUI.Views.Hubs.SignalrHubs.OnDisconnectedAsync(Exception exception) in D:\MyPrj\2021\ESOP\代码\NetCoreFrame.WebUI\Hubs\SignalrHubs.cs:line 41
+   at Microsoft.AspNetCore.SignalR.Internal.DefaultHubDispatcher`1.OnDisconnectedAsync(HubConnectionContext connection, Exception exception)
+   at Microsoft.AspNetCore.SignalR.Internal.DefaultHubDispatcher`1.OnDisconnectedAsync(HubConnectionContext connection, Exception exception)
+   at Microsoft.AspNetCore.SignalR.HubConnectionHandler`1.HubOnDisconnectedAsync(HubConnectionContext connection, Exception exception)
+   at Microsoft.AspNetCore.SignalR.HubConnectionHandler`1.RunHubAsync(HubConnectionContext connection)
+   at Microsoft.AspNetCore.SignalR.HubConnectionHandler`1.OnConnectedAsync(ConnectionContext connection)
+   at Microsoft.AspNetCore.SignalR.HubConnectionHandler`1.OnConnectedAsync(ConnectionContext connection)
+   at Microsoft.AspNetCore.Http.Connections.Internal.HttpConnectionContext.ExecuteApplication(ConnectionDelegate connectionDelegate)
+   at Microsoft.AspNetCore.Http.Connections.Internal.HttpConnectionContext.WaitOnTasks(Task applicationTask, Task transportTask, Boolean closeGracefully)
+   at Microsoft.AspNetCore.Http.Connections.Internal.HttpConnectionContext.DisposeAsync(Boolean closeGracefully)
+   at Microsoft.AspNetCore.Http.Connections.Internal.HttpConnectionManager.DisposeAndRemoveAsync(HttpConnectionContext connection, Boolean closeGracefully)
+2021-08-15 21:59:22,402 [12] WARN  Microsoft.AspNetCore.Session.SessionMiddleware - Error unprotecting the session cookie.
+System.Security.Cryptography.CryptographicException: The key {acb95d30-97ac-4ca1-ac68-9a857a1801e1} was not found in the key ring.
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.UnprotectCore(Byte[] protectedData, Boolean allowOperationsOnRevokedKeys, UnprotectStatus& status)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.DangerousUnprotect(Byte[] protectedData, Boolean ignoreRevocationErrors, Boolean& requiresMigration, Boolean& wasRevoked)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.Unprotect(Byte[] protectedData)
+   at Microsoft.AspNetCore.Session.CookieProtection.Unprotect(IDataProtector protector, String protectedText, ILogger logger)
+2021-08-15 21:59:23,033 [12] WARN  Microsoft.AspNetCore.Session.SessionMiddleware - Error unprotecting the session cookie.
+System.Security.Cryptography.CryptographicException: The key {acb95d30-97ac-4ca1-ac68-9a857a1801e1} was not found in the key ring.
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.UnprotectCore(Byte[] protectedData, Boolean allowOperationsOnRevokedKeys, UnprotectStatus& status)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.DangerousUnprotect(Byte[] protectedData, Boolean ignoreRevocationErrors, Boolean& requiresMigration, Boolean& wasRevoked)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.Unprotect(Byte[] protectedData)
+   at Microsoft.AspNetCore.Session.CookieProtection.Unprotect(IDataProtector protector, String protectedText, ILogger logger)
+2021-08-15 21:59:28,699 [6] WARN  Microsoft.AspNetCore.Session.SessionMiddleware - Error unprotecting the session cookie.
+System.Security.Cryptography.CryptographicException: The key {acb95d30-97ac-4ca1-ac68-9a857a1801e1} was not found in the key ring.
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.UnprotectCore(Byte[] protectedData, Boolean allowOperationsOnRevokedKeys, UnprotectStatus& status)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.DangerousUnprotect(Byte[] protectedData, Boolean ignoreRevocationErrors, Boolean& requiresMigration, Boolean& wasRevoked)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.Unprotect(Byte[] protectedData)
+   at Microsoft.AspNetCore.Session.CookieProtection.Unprotect(IDataProtector protector, String protectedText, ILogger logger)
+2021-08-15 22:02:13,062 [8] ERROR Microsoft.AspNetCore.SignalR.HubConnectionHandler - Error when dispatching 'OnDisconnectedAsync' on hub.
+System.ArgumentNullException: Value cannot be null. (Parameter 'connectionId')
+   at Microsoft.AspNetCore.SignalR.DefaultHubLifetimeManager`1.RemoveFromGroupAsync(String connectionId, String groupName, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.SignalR.Internal.GroupManager`1.RemoveFromGroupAsync(String connectionId, String groupName, CancellationToken cancellationToken)
+   at NetCoreFrame.WebUI.Views.Hubs.SignalrHubs.OnDisconnectedAsync(Exception exception) in D:\MyPrj\2021\ESOP\代码\NetCoreFrame.WebUI\Hubs\SignalrHubs.cs:line 41
+   at Microsoft.AspNetCore.SignalR.Internal.DefaultHubDispatcher`1.OnDisconnectedAsync(HubConnectionContext connection, Exception exception)
+   at Microsoft.AspNetCore.SignalR.Internal.DefaultHubDispatcher`1.OnDisconnectedAsync(HubConnectionContext connection, Exception exception)
+   at Microsoft.AspNetCore.SignalR.HubConnectionHandler`1.HubOnDisconnectedAsync(HubConnectionContext connection, Exception exception)
+2021-08-15 22:02:13,088 [8] ERROR Microsoft.AspNetCore.Http.Connections.Internal.HttpConnectionManager - Failed disposing connection gs5QLovgbGG3U58PjIQeEg.
+System.ArgumentNullException: Value cannot be null. (Parameter 'connectionId')
+   at Microsoft.AspNetCore.SignalR.DefaultHubLifetimeManager`1.RemoveFromGroupAsync(String connectionId, String groupName, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.SignalR.Internal.GroupManager`1.RemoveFromGroupAsync(String connectionId, String groupName, CancellationToken cancellationToken)
+   at NetCoreFrame.WebUI.Views.Hubs.SignalrHubs.OnDisconnectedAsync(Exception exception) in D:\MyPrj\2021\ESOP\代码\NetCoreFrame.WebUI\Hubs\SignalrHubs.cs:line 41
+   at Microsoft.AspNetCore.SignalR.Internal.DefaultHubDispatcher`1.OnDisconnectedAsync(HubConnectionContext connection, Exception exception)
+   at Microsoft.AspNetCore.SignalR.Internal.DefaultHubDispatcher`1.OnDisconnectedAsync(HubConnectionContext connection, Exception exception)
+   at Microsoft.AspNetCore.SignalR.HubConnectionHandler`1.HubOnDisconnectedAsync(HubConnectionContext connection, Exception exception)
+   at Microsoft.AspNetCore.SignalR.HubConnectionHandler`1.RunHubAsync(HubConnectionContext connection)
+   at Microsoft.AspNetCore.SignalR.HubConnectionHandler`1.OnConnectedAsync(ConnectionContext connection)
+   at Microsoft.AspNetCore.SignalR.HubConnectionHandler`1.OnConnectedAsync(ConnectionContext connection)
+   at Microsoft.AspNetCore.Http.Connections.Internal.HttpConnectionContext.ExecuteApplication(ConnectionDelegate connectionDelegate)
+   at Microsoft.AspNetCore.Http.Connections.Internal.HttpConnectionContext.WaitOnTasks(Task applicationTask, Task transportTask, Boolean closeGracefully)
+   at Microsoft.AspNetCore.Http.Connections.Internal.HttpConnectionContext.DisposeAsync(Boolean closeGracefully)
+   at Microsoft.AspNetCore.Http.Connections.Internal.HttpConnectionManager.DisposeAndRemoveAsync(HttpConnectionContext connection, Boolean closeGracefully)
+2021-08-15 22:02:15,769 [16] ERROR Microsoft.AspNetCore.SignalR.HubConnectionHandler - Error when dispatching 'OnDisconnectedAsync' on hub.
+System.ArgumentNullException: Value cannot be null. (Parameter 'connectionId')
+   at Microsoft.AspNetCore.SignalR.DefaultHubLifetimeManager`1.RemoveFromGroupAsync(String connectionId, String groupName, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.SignalR.Internal.GroupManager`1.RemoveFromGroupAsync(String connectionId, String groupName, CancellationToken cancellationToken)
+   at NetCoreFrame.WebUI.Views.Hubs.SignalrHubs.OnDisconnectedAsync(Exception exception) in D:\MyPrj\2021\ESOP\代码\NetCoreFrame.WebUI\Hubs\SignalrHubs.cs:line 41
+   at Microsoft.AspNetCore.SignalR.Internal.DefaultHubDispatcher`1.OnDisconnectedAsync(HubConnectionContext connection, Exception exception)
+   at Microsoft.AspNetCore.SignalR.Internal.DefaultHubDispatcher`1.OnDisconnectedAsync(HubConnectionContext connection, Exception exception)
+   at Microsoft.AspNetCore.SignalR.HubConnectionHandler`1.HubOnDisconnectedAsync(HubConnectionContext connection, Exception exception)
+2021-08-15 22:02:15,774 [16] ERROR Microsoft.AspNetCore.Http.Connections.Internal.HttpConnectionManager - Failed disposing connection gJbcs0v8fslz8Q_1LwCrjA.
+System.ArgumentNullException: Value cannot be null. (Parameter 'connectionId')
+   at Microsoft.AspNetCore.SignalR.DefaultHubLifetimeManager`1.RemoveFromGroupAsync(String connectionId, String groupName, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.SignalR.Internal.GroupManager`1.RemoveFromGroupAsync(String connectionId, String groupName, CancellationToken cancellationToken)
+   at NetCoreFrame.WebUI.Views.Hubs.SignalrHubs.OnDisconnectedAsync(Exception exception) in D:\MyPrj\2021\ESOP\代码\NetCoreFrame.WebUI\Hubs\SignalrHubs.cs:line 41
+   at Microsoft.AspNetCore.SignalR.Internal.DefaultHubDispatcher`1.OnDisconnectedAsync(HubConnectionContext connection, Exception exception)
+   at Microsoft.AspNetCore.SignalR.Internal.DefaultHubDispatcher`1.OnDisconnectedAsync(HubConnectionContext connection, Exception exception)
+   at Microsoft.AspNetCore.SignalR.HubConnectionHandler`1.HubOnDisconnectedAsync(HubConnectionContext connection, Exception exception)
+   at Microsoft.AspNetCore.SignalR.HubConnectionHandler`1.RunHubAsync(HubConnectionContext connection)
+   at Microsoft.AspNetCore.SignalR.HubConnectionHandler`1.OnConnectedAsync(ConnectionContext connection)
+   at Microsoft.AspNetCore.SignalR.HubConnectionHandler`1.OnConnectedAsync(ConnectionContext connection)
+   at Microsoft.AspNetCore.Http.Connections.Internal.HttpConnectionContext.ExecuteApplication(ConnectionDelegate connectionDelegate)
+   at Microsoft.AspNetCore.Http.Connections.Internal.HttpConnectionContext.WaitOnTasks(Task applicationTask, Task transportTask, Boolean closeGracefully)
+   at Microsoft.AspNetCore.Http.Connections.Internal.HttpConnectionContext.DisposeAsync(Boolean closeGracefully)
+   at Microsoft.AspNetCore.Http.Connections.Internal.HttpConnectionManager.DisposeAndRemoveAsync(HttpConnectionContext connection, Boolean closeGracefully)
+2021-08-15 22:02:16,476 [8] ERROR Microsoft.AspNetCore.SignalR.HubConnectionHandler - Error when dispatching 'OnDisconnectedAsync' on hub.
+System.ArgumentNullException: Value cannot be null. (Parameter 'connectionId')
+   at Microsoft.AspNetCore.SignalR.DefaultHubLifetimeManager`1.RemoveFromGroupAsync(String connectionId, String groupName, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.SignalR.Internal.GroupManager`1.RemoveFromGroupAsync(String connectionId, String groupName, CancellationToken cancellationToken)
+   at NetCoreFrame.WebUI.Views.Hubs.SignalrHubs.OnDisconnectedAsync(Exception exception) in D:\MyPrj\2021\ESOP\代码\NetCoreFrame.WebUI\Hubs\SignalrHubs.cs:line 41
+   at Microsoft.AspNetCore.SignalR.Internal.DefaultHubDispatcher`1.OnDisconnectedAsync(HubConnectionContext connection, Exception exception)
+   at Microsoft.AspNetCore.SignalR.Internal.DefaultHubDispatcher`1.OnDisconnectedAsync(HubConnectionContext connection, Exception exception)
+   at Microsoft.AspNetCore.SignalR.HubConnectionHandler`1.HubOnDisconnectedAsync(HubConnectionContext connection, Exception exception)
+2021-08-15 22:02:16,482 [8] ERROR Microsoft.AspNetCore.Http.Connections.Internal.HttpConnectionManager - Failed disposing connection Uba6QA3-o09-YHHmSi6kjw.
+System.ArgumentNullException: Value cannot be null. (Parameter 'connectionId')
+   at Microsoft.AspNetCore.SignalR.DefaultHubLifetimeManager`1.RemoveFromGroupAsync(String connectionId, String groupName, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.SignalR.Internal.GroupManager`1.RemoveFromGroupAsync(String connectionId, String groupName, CancellationToken cancellationToken)
+   at NetCoreFrame.WebUI.Views.Hubs.SignalrHubs.OnDisconnectedAsync(Exception exception) in D:\MyPrj\2021\ESOP\代码\NetCoreFrame.WebUI\Hubs\SignalrHubs.cs:line 41
+   at Microsoft.AspNetCore.SignalR.Internal.DefaultHubDispatcher`1.OnDisconnectedAsync(HubConnectionContext connection, Exception exception)
+   at Microsoft.AspNetCore.SignalR.Internal.DefaultHubDispatcher`1.OnDisconnectedAsync(HubConnectionContext connection, Exception exception)
+   at Microsoft.AspNetCore.SignalR.HubConnectionHandler`1.HubOnDisconnectedAsync(HubConnectionContext connection, Exception exception)
+   at Microsoft.AspNetCore.SignalR.HubConnectionHandler`1.RunHubAsync(HubConnectionContext connection)
+   at Microsoft.AspNetCore.SignalR.HubConnectionHandler`1.OnConnectedAsync(ConnectionContext connection)
+   at Microsoft.AspNetCore.SignalR.HubConnectionHandler`1.OnConnectedAsync(ConnectionContext connection)
+   at Microsoft.AspNetCore.Http.Connections.Internal.HttpConnectionContext.ExecuteApplication(ConnectionDelegate connectionDelegate)
+   at Microsoft.AspNetCore.Http.Connections.Internal.HttpConnectionContext.WaitOnTasks(Task applicationTask, Task transportTask, Boolean closeGracefully)
+   at Microsoft.AspNetCore.Http.Connections.Internal.HttpConnectionContext.DisposeAsync(Boolean closeGracefully)
+   at Microsoft.AspNetCore.Http.Connections.Internal.HttpConnectionManager.DisposeAndRemoveAsync(HttpConnectionContext connection, Boolean closeGracefully)
+2021-08-15 22:02:17,047 [12] ERROR Microsoft.AspNetCore.SignalR.HubConnectionHandler - Error when dispatching 'OnDisconnectedAsync' on hub.
+System.ArgumentNullException: Value cannot be null. (Parameter 'connectionId')
+   at Microsoft.AspNetCore.SignalR.DefaultHubLifetimeManager`1.RemoveFromGroupAsync(String connectionId, String groupName, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.SignalR.Internal.GroupManager`1.RemoveFromGroupAsync(String connectionId, String groupName, CancellationToken cancellationToken)
+   at NetCoreFrame.WebUI.Views.Hubs.SignalrHubs.OnDisconnectedAsync(Exception exception) in D:\MyPrj\2021\ESOP\代码\NetCoreFrame.WebUI\Hubs\SignalrHubs.cs:line 41
+   at Microsoft.AspNetCore.SignalR.Internal.DefaultHubDispatcher`1.OnDisconnectedAsync(HubConnectionContext connection, Exception exception)
+   at Microsoft.AspNetCore.SignalR.Internal.DefaultHubDispatcher`1.OnDisconnectedAsync(HubConnectionContext connection, Exception exception)
+   at Microsoft.AspNetCore.SignalR.HubConnectionHandler`1.HubOnDisconnectedAsync(HubConnectionContext connection, Exception exception)
+2021-08-15 22:02:17,050 [12] ERROR Microsoft.AspNetCore.Http.Connections.Internal.HttpConnectionManager - Failed disposing connection 5Uj3U79TtMgm38aOCA1i4A.
+System.ArgumentNullException: Value cannot be null. (Parameter 'connectionId')
+   at Microsoft.AspNetCore.SignalR.DefaultHubLifetimeManager`1.RemoveFromGroupAsync(String connectionId, String groupName, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.SignalR.Internal.GroupManager`1.RemoveFromGroupAsync(String connectionId, String groupName, CancellationToken cancellationToken)
+   at NetCoreFrame.WebUI.Views.Hubs.SignalrHubs.OnDisconnectedAsync(Exception exception) in D:\MyPrj\2021\ESOP\代码\NetCoreFrame.WebUI\Hubs\SignalrHubs.cs:line 41
+   at Microsoft.AspNetCore.SignalR.Internal.DefaultHubDispatcher`1.OnDisconnectedAsync(HubConnectionContext connection, Exception exception)
+   at Microsoft.AspNetCore.SignalR.Internal.DefaultHubDispatcher`1.OnDisconnectedAsync(HubConnectionContext connection, Exception exception)
+   at Microsoft.AspNetCore.SignalR.HubConnectionHandler`1.HubOnDisconnectedAsync(HubConnectionContext connection, Exception exception)
+   at Microsoft.AspNetCore.SignalR.HubConnectionHandler`1.RunHubAsync(HubConnectionContext connection)
+   at Microsoft.AspNetCore.SignalR.HubConnectionHandler`1.OnConnectedAsync(ConnectionContext connection)
+   at Microsoft.AspNetCore.SignalR.HubConnectionHandler`1.OnConnectedAsync(ConnectionContext connection)
+   at Microsoft.AspNetCore.Http.Connections.Internal.HttpConnectionContext.ExecuteApplication(ConnectionDelegate connectionDelegate)
+   at Microsoft.AspNetCore.Http.Connections.Internal.HttpConnectionContext.WaitOnTasks(Task applicationTask, Task transportTask, Boolean closeGracefully)
+   at Microsoft.AspNetCore.Http.Connections.Internal.HttpConnectionContext.DisposeAsync(Boolean closeGracefully)
+   at Microsoft.AspNetCore.Http.Connections.Internal.HttpConnectionManager.DisposeAndRemoveAsync(HttpConnectionContext connection, Boolean closeGracefully)
+2021-08-15 22:02:17,598 [13] ERROR Microsoft.AspNetCore.SignalR.HubConnectionHandler - Error when dispatching 'OnDisconnectedAsync' on hub.
+System.ArgumentNullException: Value cannot be null. (Parameter 'connectionId')
+   at Microsoft.AspNetCore.SignalR.DefaultHubLifetimeManager`1.RemoveFromGroupAsync(String connectionId, String groupName, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.SignalR.Internal.GroupManager`1.RemoveFromGroupAsync(String connectionId, String groupName, CancellationToken cancellationToken)
+   at NetCoreFrame.WebUI.Views.Hubs.SignalrHubs.OnDisconnectedAsync(Exception exception) in D:\MyPrj\2021\ESOP\代码\NetCoreFrame.WebUI\Hubs\SignalrHubs.cs:line 41
+   at Microsoft.AspNetCore.SignalR.Internal.DefaultHubDispatcher`1.OnDisconnectedAsync(HubConnectionContext connection, Exception exception)
+   at Microsoft.AspNetCore.SignalR.Internal.DefaultHubDispatcher`1.OnDisconnectedAsync(HubConnectionContext connection, Exception exception)
+   at Microsoft.AspNetCore.SignalR.HubConnectionHandler`1.HubOnDisconnectedAsync(HubConnectionContext connection, Exception exception)
+2021-08-15 22:02:17,602 [13] ERROR Microsoft.AspNetCore.Http.Connections.Internal.HttpConnectionManager - Failed disposing connection GEXwALPAArM7C9sGzYQ9qQ.
+System.ArgumentNullException: Value cannot be null. (Parameter 'connectionId')
+   at Microsoft.AspNetCore.SignalR.DefaultHubLifetimeManager`1.RemoveFromGroupAsync(String connectionId, String groupName, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.SignalR.Internal.GroupManager`1.RemoveFromGroupAsync(String connectionId, String groupName, CancellationToken cancellationToken)
+   at NetCoreFrame.WebUI.Views.Hubs.SignalrHubs.OnDisconnectedAsync(Exception exception) in D:\MyPrj\2021\ESOP\代码\NetCoreFrame.WebUI\Hubs\SignalrHubs.cs:line 41
+   at Microsoft.AspNetCore.SignalR.Internal.DefaultHubDispatcher`1.OnDisconnectedAsync(HubConnectionContext connection, Exception exception)
+   at Microsoft.AspNetCore.SignalR.Internal.DefaultHubDispatcher`1.OnDisconnectedAsync(HubConnectionContext connection, Exception exception)
+   at Microsoft.AspNetCore.SignalR.HubConnectionHandler`1.HubOnDisconnectedAsync(HubConnectionContext connection, Exception exception)
+   at Microsoft.AspNetCore.SignalR.HubConnectionHandler`1.RunHubAsync(HubConnectionContext connection)
+   at Microsoft.AspNetCore.SignalR.HubConnectionHandler`1.OnConnectedAsync(ConnectionContext connection)
+   at Microsoft.AspNetCore.SignalR.HubConnectionHandler`1.OnConnectedAsync(ConnectionContext connection)
+   at Microsoft.AspNetCore.Http.Connections.Internal.HttpConnectionContext.ExecuteApplication(ConnectionDelegate connectionDelegate)
+   at Microsoft.AspNetCore.Http.Connections.Internal.HttpConnectionContext.WaitOnTasks(Task applicationTask, Task transportTask, Boolean closeGracefully)
+   at Microsoft.AspNetCore.Http.Connections.Internal.HttpConnectionContext.DisposeAsync(Boolean closeGracefully)
+   at Microsoft.AspNetCore.Http.Connections.Internal.HttpConnectionManager.DisposeAndRemoveAsync(HttpConnectionContext connection, Boolean closeGracefully)
+2021-08-15 22:02:18,050 [13] ERROR Microsoft.AspNetCore.SignalR.HubConnectionHandler - Error when dispatching 'OnDisconnectedAsync' on hub.
+System.ArgumentNullException: Value cannot be null. (Parameter 'connectionId')
+   at Microsoft.AspNetCore.SignalR.DefaultHubLifetimeManager`1.RemoveFromGroupAsync(String connectionId, String groupName, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.SignalR.Internal.GroupManager`1.RemoveFromGroupAsync(String connectionId, String groupName, CancellationToken cancellationToken)
+   at NetCoreFrame.WebUI.Views.Hubs.SignalrHubs.OnDisconnectedAsync(Exception exception) in D:\MyPrj\2021\ESOP\代码\NetCoreFrame.WebUI\Hubs\SignalrHubs.cs:line 41
+   at Microsoft.AspNetCore.SignalR.Internal.DefaultHubDispatcher`1.OnDisconnectedAsync(HubConnectionContext connection, Exception exception)
+   at Microsoft.AspNetCore.SignalR.Internal.DefaultHubDispatcher`1.OnDisconnectedAsync(HubConnectionContext connection, Exception exception)
+   at Microsoft.AspNetCore.SignalR.HubConnectionHandler`1.HubOnDisconnectedAsync(HubConnectionContext connection, Exception exception)
+2021-08-15 22:02:18,053 [13] ERROR Microsoft.AspNetCore.Http.Connections.Internal.HttpConnectionManager - Failed disposing connection zRfvusK_kuz5VIo7LUX52g.
+System.ArgumentNullException: Value cannot be null. (Parameter 'connectionId')
+   at Microsoft.AspNetCore.SignalR.DefaultHubLifetimeManager`1.RemoveFromGroupAsync(String connectionId, String groupName, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.SignalR.Internal.GroupManager`1.RemoveFromGroupAsync(String connectionId, String groupName, CancellationToken cancellationToken)
+   at NetCoreFrame.WebUI.Views.Hubs.SignalrHubs.OnDisconnectedAsync(Exception exception) in D:\MyPrj\2021\ESOP\代码\NetCoreFrame.WebUI\Hubs\SignalrHubs.cs:line 41
+   at Microsoft.AspNetCore.SignalR.Internal.DefaultHubDispatcher`1.OnDisconnectedAsync(HubConnectionContext connection, Exception exception)
+   at Microsoft.AspNetCore.SignalR.Internal.DefaultHubDispatcher`1.OnDisconnectedAsync(HubConnectionContext connection, Exception exception)
+   at Microsoft.AspNetCore.SignalR.HubConnectionHandler`1.HubOnDisconnectedAsync(HubConnectionContext connection, Exception exception)
+   at Microsoft.AspNetCore.SignalR.HubConnectionHandler`1.RunHubAsync(HubConnectionContext connection)
+   at Microsoft.AspNetCore.SignalR.HubConnectionHandler`1.OnConnectedAsync(ConnectionContext connection)
+   at Microsoft.AspNetCore.SignalR.HubConnectionHandler`1.OnConnectedAsync(ConnectionContext connection)
+   at Microsoft.AspNetCore.Http.Connections.Internal.HttpConnectionContext.ExecuteApplication(ConnectionDelegate connectionDelegate)
+   at Microsoft.AspNetCore.Http.Connections.Internal.HttpConnectionContext.WaitOnTasks(Task applicationTask, Task transportTask, Boolean closeGracefully)
+   at Microsoft.AspNetCore.Http.Connections.Internal.HttpConnectionContext.DisposeAsync(Boolean closeGracefully)
+   at Microsoft.AspNetCore.Http.Connections.Internal.HttpConnectionManager.DisposeAndRemoveAsync(HttpConnectionContext connection, Boolean closeGracefully)
+2021-08-15 22:02:18,259 [13] ERROR Microsoft.AspNetCore.SignalR.HubConnectionHandler - Error when dispatching 'OnDisconnectedAsync' on hub.
+System.ArgumentNullException: Value cannot be null. (Parameter 'connectionId')
+   at Microsoft.AspNetCore.SignalR.DefaultHubLifetimeManager`1.RemoveFromGroupAsync(String connectionId, String groupName, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.SignalR.Internal.GroupManager`1.RemoveFromGroupAsync(String connectionId, String groupName, CancellationToken cancellationToken)
+   at NetCoreFrame.WebUI.Views.Hubs.SignalrHubs.OnDisconnectedAsync(Exception exception) in D:\MyPrj\2021\ESOP\代码\NetCoreFrame.WebUI\Hubs\SignalrHubs.cs:line 41
+   at Microsoft.AspNetCore.SignalR.Internal.DefaultHubDispatcher`1.OnDisconnectedAsync(HubConnectionContext connection, Exception exception)
+   at Microsoft.AspNetCore.SignalR.Internal.DefaultHubDispatcher`1.OnDisconnectedAsync(HubConnectionContext connection, Exception exception)
+   at Microsoft.AspNetCore.SignalR.HubConnectionHandler`1.HubOnDisconnectedAsync(HubConnectionContext connection, Exception exception)
+2021-08-15 22:02:18,268 [13] ERROR Microsoft.AspNetCore.Http.Connections.Internal.HttpConnectionManager - Failed disposing connection CGXHhvLziSqqLQfdceOzaQ.
+System.ArgumentNullException: Value cannot be null. (Parameter 'connectionId')
+   at Microsoft.AspNetCore.SignalR.DefaultHubLifetimeManager`1.RemoveFromGroupAsync(String connectionId, String groupName, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.SignalR.Internal.GroupManager`1.RemoveFromGroupAsync(String connectionId, String groupName, CancellationToken cancellationToken)
+   at NetCoreFrame.WebUI.Views.Hubs.SignalrHubs.OnDisconnectedAsync(Exception exception) in D:\MyPrj\2021\ESOP\代码\NetCoreFrame.WebUI\Hubs\SignalrHubs.cs:line 41
+   at Microsoft.AspNetCore.SignalR.Internal.DefaultHubDispatcher`1.OnDisconnectedAsync(HubConnectionContext connection, Exception exception)
+   at Microsoft.AspNetCore.SignalR.Internal.DefaultHubDispatcher`1.OnDisconnectedAsync(HubConnectionContext connection, Exception exception)
+   at Microsoft.AspNetCore.SignalR.HubConnectionHandler`1.HubOnDisconnectedAsync(HubConnectionContext connection, Exception exception)
+   at Microsoft.AspNetCore.SignalR.HubConnectionHandler`1.RunHubAsync(HubConnectionContext connection)
+   at Microsoft.AspNetCore.SignalR.HubConnectionHandler`1.OnConnectedAsync(ConnectionContext connection)
+   at Microsoft.AspNetCore.SignalR.HubConnectionHandler`1.OnConnectedAsync(ConnectionContext connection)
+   at Microsoft.AspNetCore.Http.Connections.Internal.HttpConnectionContext.ExecuteApplication(ConnectionDelegate connectionDelegate)
+   at Microsoft.AspNetCore.Http.Connections.Internal.HttpConnectionContext.WaitOnTasks(Task applicationTask, Task transportTask, Boolean closeGracefully)
+   at Microsoft.AspNetCore.Http.Connections.Internal.HttpConnectionContext.DisposeAsync(Boolean closeGracefully)
+   at Microsoft.AspNetCore.Http.Connections.Internal.HttpConnectionManager.DisposeAndRemoveAsync(HttpConnectionContext connection, Boolean closeGracefully)
+2021-08-15 22:02:18,425 [9] ERROR Microsoft.AspNetCore.SignalR.HubConnectionHandler - Error when dispatching 'OnDisconnectedAsync' on hub.
+System.ArgumentNullException: Value cannot be null. (Parameter 'connectionId')
+   at Microsoft.AspNetCore.SignalR.DefaultHubLifetimeManager`1.RemoveFromGroupAsync(String connectionId, String groupName, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.SignalR.Internal.GroupManager`1.RemoveFromGroupAsync(String connectionId, String groupName, CancellationToken cancellationToken)
+   at NetCoreFrame.WebUI.Views.Hubs.SignalrHubs.OnDisconnectedAsync(Exception exception) in D:\MyPrj\2021\ESOP\代码\NetCoreFrame.WebUI\Hubs\SignalrHubs.cs:line 41
+   at Microsoft.AspNetCore.SignalR.Internal.DefaultHubDispatcher`1.OnDisconnectedAsync(HubConnectionContext connection, Exception exception)
+   at Microsoft.AspNetCore.SignalR.Internal.DefaultHubDispatcher`1.OnDisconnectedAsync(HubConnectionContext connection, Exception exception)
+   at Microsoft.AspNetCore.SignalR.HubConnectionHandler`1.HubOnDisconnectedAsync(HubConnectionContext connection, Exception exception)
+2021-08-15 22:02:18,433 [9] ERROR Microsoft.AspNetCore.Http.Connections.Internal.HttpConnectionManager - Failed disposing connection hNAPUuaEcGFMYVZ7h7xeDA.
+System.ArgumentNullException: Value cannot be null. (Parameter 'connectionId')
+   at Microsoft.AspNetCore.SignalR.DefaultHubLifetimeManager`1.RemoveFromGroupAsync(String connectionId, String groupName, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.SignalR.Internal.GroupManager`1.RemoveFromGroupAsync(String connectionId, String groupName, CancellationToken cancellationToken)
+   at NetCoreFrame.WebUI.Views.Hubs.SignalrHubs.OnDisconnectedAsync(Exception exception) in D:\MyPrj\2021\ESOP\代码\NetCoreFrame.WebUI\Hubs\SignalrHubs.cs:line 41
+   at Microsoft.AspNetCore.SignalR.Internal.DefaultHubDispatcher`1.OnDisconnectedAsync(HubConnectionContext connection, Exception exception)
+   at Microsoft.AspNetCore.SignalR.Internal.DefaultHubDispatcher`1.OnDisconnectedAsync(HubConnectionContext connection, Exception exception)
+   at Microsoft.AspNetCore.SignalR.HubConnectionHandler`1.HubOnDisconnectedAsync(HubConnectionContext connection, Exception exception)
+   at Microsoft.AspNetCore.SignalR.HubConnectionHandler`1.RunHubAsync(HubConnectionContext connection)
+   at Microsoft.AspNetCore.SignalR.HubConnectionHandler`1.OnConnectedAsync(ConnectionContext connection)
+   at Microsoft.AspNetCore.SignalR.HubConnectionHandler`1.OnConnectedAsync(ConnectionContext connection)
+   at Microsoft.AspNetCore.Http.Connections.Internal.HttpConnectionContext.ExecuteApplication(ConnectionDelegate connectionDelegate)
+   at Microsoft.AspNetCore.Http.Connections.Internal.HttpConnectionContext.WaitOnTasks(Task applicationTask, Task transportTask, Boolean closeGracefully)
+   at Microsoft.AspNetCore.Http.Connections.Internal.HttpConnectionContext.DisposeAsync(Boolean closeGracefully)
+   at Microsoft.AspNetCore.Http.Connections.Internal.HttpConnectionManager.DisposeAndRemoveAsync(HttpConnectionContext connection, Boolean closeGracefully)
+2021-08-15 22:02:18,736 [12] ERROR Microsoft.AspNetCore.SignalR.HubConnectionHandler - Error when dispatching 'OnDisconnectedAsync' on hub.
+System.ArgumentNullException: Value cannot be null. (Parameter 'connectionId')
+   at Microsoft.AspNetCore.SignalR.DefaultHubLifetimeManager`1.RemoveFromGroupAsync(String connectionId, String groupName, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.SignalR.Internal.GroupManager`1.RemoveFromGroupAsync(String connectionId, String groupName, CancellationToken cancellationToken)
+   at NetCoreFrame.WebUI.Views.Hubs.SignalrHubs.OnDisconnectedAsync(Exception exception) in D:\MyPrj\2021\ESOP\代码\NetCoreFrame.WebUI\Hubs\SignalrHubs.cs:line 41
+   at Microsoft.AspNetCore.SignalR.Internal.DefaultHubDispatcher`1.OnDisconnectedAsync(HubConnectionContext connection, Exception exception)
+   at Microsoft.AspNetCore.SignalR.Internal.DefaultHubDispatcher`1.OnDisconnectedAsync(HubConnectionContext connection, Exception exception)
+   at Microsoft.AspNetCore.SignalR.HubConnectionHandler`1.HubOnDisconnectedAsync(HubConnectionContext connection, Exception exception)
+2021-08-15 22:02:18,739 [12] ERROR Microsoft.AspNetCore.Http.Connections.Internal.HttpConnectionManager - Failed disposing connection pnspdCNlnzPqyI-lQg1vKQ.
+System.ArgumentNullException: Value cannot be null. (Parameter 'connectionId')
+   at Microsoft.AspNetCore.SignalR.DefaultHubLifetimeManager`1.RemoveFromGroupAsync(String connectionId, String groupName, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.SignalR.Internal.GroupManager`1.RemoveFromGroupAsync(String connectionId, String groupName, CancellationToken cancellationToken)
+   at NetCoreFrame.WebUI.Views.Hubs.SignalrHubs.OnDisconnectedAsync(Exception exception) in D:\MyPrj\2021\ESOP\代码\NetCoreFrame.WebUI\Hubs\SignalrHubs.cs:line 41
+   at Microsoft.AspNetCore.SignalR.Internal.DefaultHubDispatcher`1.OnDisconnectedAsync(HubConnectionContext connection, Exception exception)
+   at Microsoft.AspNetCore.SignalR.Internal.DefaultHubDispatcher`1.OnDisconnectedAsync(HubConnectionContext connection, Exception exception)
+   at Microsoft.AspNetCore.SignalR.HubConnectionHandler`1.HubOnDisconnectedAsync(HubConnectionContext connection, Exception exception)
+   at Microsoft.AspNetCore.SignalR.HubConnectionHandler`1.RunHubAsync(HubConnectionContext connection)
+   at Microsoft.AspNetCore.SignalR.HubConnectionHandler`1.OnConnectedAsync(ConnectionContext connection)
+   at Microsoft.AspNetCore.SignalR.HubConnectionHandler`1.OnConnectedAsync(ConnectionContext connection)
+   at Microsoft.AspNetCore.Http.Connections.Internal.HttpConnectionContext.ExecuteApplication(ConnectionDelegate connectionDelegate)
+   at Microsoft.AspNetCore.Http.Connections.Internal.HttpConnectionContext.WaitOnTasks(Task applicationTask, Task transportTask, Boolean closeGracefully)
+   at Microsoft.AspNetCore.Http.Connections.Internal.HttpConnectionContext.DisposeAsync(Boolean closeGracefully)
+   at Microsoft.AspNetCore.Http.Connections.Internal.HttpConnectionManager.DisposeAndRemoveAsync(HttpConnectionContext connection, Boolean closeGracefully)
+2021-08-15 22:03:08,851 [5] ERROR Microsoft.AspNetCore.SignalR.HubConnectionHandler - Error when dispatching 'OnDisconnectedAsync' on hub.
+System.ArgumentNullException: Value cannot be null. (Parameter 'connectionId')
+   at Microsoft.AspNetCore.SignalR.DefaultHubLifetimeManager`1.RemoveFromGroupAsync(String connectionId, String groupName, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.SignalR.Internal.GroupManager`1.RemoveFromGroupAsync(String connectionId, String groupName, CancellationToken cancellationToken)
+   at NetCoreFrame.WebUI.Views.Hubs.SignalrHubs.OnDisconnectedAsync(Exception exception) in D:\MyPrj\2021\ESOP\代码\NetCoreFrame.WebUI\Hubs\SignalrHubs.cs:line 41
+   at Microsoft.AspNetCore.SignalR.Internal.DefaultHubDispatcher`1.OnDisconnectedAsync(HubConnectionContext connection, Exception exception)
+   at Microsoft.AspNetCore.SignalR.Internal.DefaultHubDispatcher`1.OnDisconnectedAsync(HubConnectionContext connection, Exception exception)
+   at Microsoft.AspNetCore.SignalR.HubConnectionHandler`1.HubOnDisconnectedAsync(HubConnectionContext connection, Exception exception)
+2021-08-15 22:03:08,857 [5] ERROR Microsoft.AspNetCore.Http.Connections.Internal.HttpConnectionManager - Failed disposing connection yGXePKDu8_x1PnMAjANGtQ.
+System.ArgumentNullException: Value cannot be null. (Parameter 'connectionId')
+   at Microsoft.AspNetCore.SignalR.DefaultHubLifetimeManager`1.RemoveFromGroupAsync(String connectionId, String groupName, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.SignalR.Internal.GroupManager`1.RemoveFromGroupAsync(String connectionId, String groupName, CancellationToken cancellationToken)
+   at NetCoreFrame.WebUI.Views.Hubs.SignalrHubs.OnDisconnectedAsync(Exception exception) in D:\MyPrj\2021\ESOP\代码\NetCoreFrame.WebUI\Hubs\SignalrHubs.cs:line 41
+   at Microsoft.AspNetCore.SignalR.Internal.DefaultHubDispatcher`1.OnDisconnectedAsync(HubConnectionContext connection, Exception exception)
+   at Microsoft.AspNetCore.SignalR.Internal.DefaultHubDispatcher`1.OnDisconnectedAsync(HubConnectionContext connection, Exception exception)
+   at Microsoft.AspNetCore.SignalR.HubConnectionHandler`1.HubOnDisconnectedAsync(HubConnectionContext connection, Exception exception)
+   at Microsoft.AspNetCore.SignalR.HubConnectionHandler`1.RunHubAsync(HubConnectionContext connection)
+   at Microsoft.AspNetCore.SignalR.HubConnectionHandler`1.OnConnectedAsync(ConnectionContext connection)
+   at Microsoft.AspNetCore.SignalR.HubConnectionHandler`1.OnConnectedAsync(ConnectionContext connection)
+   at Microsoft.AspNetCore.Http.Connections.Internal.HttpConnectionContext.ExecuteApplication(ConnectionDelegate connectionDelegate)
+   at Microsoft.AspNetCore.Http.Connections.Internal.HttpConnectionContext.WaitOnTasks(Task applicationTask, Task transportTask, Boolean closeGracefully)
+   at Microsoft.AspNetCore.Http.Connections.Internal.HttpConnectionContext.DisposeAsync(Boolean closeGracefully)
+   at Microsoft.AspNetCore.Http.Connections.Internal.HttpConnectionManager.DisposeAndRemoveAsync(HttpConnectionContext connection, Boolean closeGracefully)
+2021-08-15 22:03:12,365 [20] ERROR Microsoft.AspNetCore.SignalR.HubConnectionHandler - Error when dispatching 'OnDisconnectedAsync' on hub.
+System.ArgumentNullException: Value cannot be null. (Parameter 'connectionId')
+   at Microsoft.AspNetCore.SignalR.DefaultHubLifetimeManager`1.RemoveFromGroupAsync(String connectionId, String groupName, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.SignalR.Internal.GroupManager`1.RemoveFromGroupAsync(String connectionId, String groupName, CancellationToken cancellationToken)
+   at NetCoreFrame.WebUI.Views.Hubs.SignalrHubs.OnDisconnectedAsync(Exception exception) in D:\MyPrj\2021\ESOP\代码\NetCoreFrame.WebUI\Hubs\SignalrHubs.cs:line 41
+   at Microsoft.AspNetCore.SignalR.Internal.DefaultHubDispatcher`1.OnDisconnectedAsync(HubConnectionContext connection, Exception exception)
+   at Microsoft.AspNetCore.SignalR.Internal.DefaultHubDispatcher`1.OnDisconnectedAsync(HubConnectionContext connection, Exception exception)
+   at Microsoft.AspNetCore.SignalR.HubConnectionHandler`1.HubOnDisconnectedAsync(HubConnectionContext connection, Exception exception)
+2021-08-15 22:03:12,368 [20] ERROR Microsoft.AspNetCore.Http.Connections.Internal.HttpConnectionManager - Failed disposing connection XUF0Kx_rL_Yse7HPKXi7NA.
+System.ArgumentNullException: Value cannot be null. (Parameter 'connectionId')
+   at Microsoft.AspNetCore.SignalR.DefaultHubLifetimeManager`1.RemoveFromGroupAsync(String connectionId, String groupName, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.SignalR.Internal.GroupManager`1.RemoveFromGroupAsync(String connectionId, String groupName, CancellationToken cancellationToken)
+   at NetCoreFrame.WebUI.Views.Hubs.SignalrHubs.OnDisconnectedAsync(Exception exception) in D:\MyPrj\2021\ESOP\代码\NetCoreFrame.WebUI\Hubs\SignalrHubs.cs:line 41
+   at Microsoft.AspNetCore.SignalR.Internal.DefaultHubDispatcher`1.OnDisconnectedAsync(HubConnectionContext connection, Exception exception)
+   at Microsoft.AspNetCore.SignalR.Internal.DefaultHubDispatcher`1.OnDisconnectedAsync(HubConnectionContext connection, Exception exception)
+   at Microsoft.AspNetCore.SignalR.HubConnectionHandler`1.HubOnDisconnectedAsync(HubConnectionContext connection, Exception exception)
+   at Microsoft.AspNetCore.SignalR.HubConnectionHandler`1.RunHubAsync(HubConnectionContext connection)
+   at Microsoft.AspNetCore.SignalR.HubConnectionHandler`1.OnConnectedAsync(ConnectionContext connection)
+   at Microsoft.AspNetCore.SignalR.HubConnectionHandler`1.OnConnectedAsync(ConnectionContext connection)
+   at Microsoft.AspNetCore.Http.Connections.Internal.HttpConnectionContext.ExecuteApplication(ConnectionDelegate connectionDelegate)
+   at Microsoft.AspNetCore.Http.Connections.Internal.HttpConnectionContext.WaitOnTasks(Task applicationTask, Task transportTask, Boolean closeGracefully)
+   at Microsoft.AspNetCore.Http.Connections.Internal.HttpConnectionContext.DisposeAsync(Boolean closeGracefully)
+   at Microsoft.AspNetCore.Http.Connections.Internal.HttpConnectionManager.DisposeAndRemoveAsync(HttpConnectionContext connection, Boolean closeGracefully)
+2021-08-15 22:06:16,953 [4] ERROR Microsoft.AspNetCore.SignalR.HubConnectionHandler - Error when dispatching 'OnDisconnectedAsync' on hub.
+System.ArgumentNullException: Value cannot be null. (Parameter 'connectionId')
+   at Microsoft.AspNetCore.SignalR.DefaultHubLifetimeManager`1.RemoveFromGroupAsync(String connectionId, String groupName, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.SignalR.Internal.GroupManager`1.RemoveFromGroupAsync(String connectionId, String groupName, CancellationToken cancellationToken)
+   at NetCoreFrame.WebUI.Views.Hubs.SignalrHubs.OnDisconnectedAsync(Exception exception) in D:\MyPrj\2021\ESOP\代码\NetCoreFrame.WebUI\Hubs\SignalrHubs.cs:line 41
+   at Microsoft.AspNetCore.SignalR.Internal.DefaultHubDispatcher`1.OnDisconnectedAsync(HubConnectionContext connection, Exception exception)
+   at Microsoft.AspNetCore.SignalR.Internal.DefaultHubDispatcher`1.OnDisconnectedAsync(HubConnectionContext connection, Exception exception)
+   at Microsoft.AspNetCore.SignalR.HubConnectionHandler`1.HubOnDisconnectedAsync(HubConnectionContext connection, Exception exception)
+2021-08-15 22:06:17,009 [4] ERROR Microsoft.AspNetCore.Http.Connections.Internal.HttpConnectionManager - Failed disposing connection cOCz0UJlTttFxlmtbh-4wA.
+System.ArgumentNullException: Value cannot be null. (Parameter 'connectionId')
+   at Microsoft.AspNetCore.SignalR.DefaultHubLifetimeManager`1.RemoveFromGroupAsync(String connectionId, String groupName, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.SignalR.Internal.GroupManager`1.RemoveFromGroupAsync(String connectionId, String groupName, CancellationToken cancellationToken)
+   at NetCoreFrame.WebUI.Views.Hubs.SignalrHubs.OnDisconnectedAsync(Exception exception) in D:\MyPrj\2021\ESOP\代码\NetCoreFrame.WebUI\Hubs\SignalrHubs.cs:line 41
+   at Microsoft.AspNetCore.SignalR.Internal.DefaultHubDispatcher`1.OnDisconnectedAsync(HubConnectionContext connection, Exception exception)
+   at Microsoft.AspNetCore.SignalR.Internal.DefaultHubDispatcher`1.OnDisconnectedAsync(HubConnectionContext connection, Exception exception)
+   at Microsoft.AspNetCore.SignalR.HubConnectionHandler`1.HubOnDisconnectedAsync(HubConnectionContext connection, Exception exception)
+   at Microsoft.AspNetCore.SignalR.HubConnectionHandler`1.RunHubAsync(HubConnectionContext connection)
+   at Microsoft.AspNetCore.SignalR.HubConnectionHandler`1.OnConnectedAsync(ConnectionContext connection)
+   at Microsoft.AspNetCore.SignalR.HubConnectionHandler`1.OnConnectedAsync(ConnectionContext connection)
+   at Microsoft.AspNetCore.Http.Connections.Internal.HttpConnectionContext.ExecuteApplication(ConnectionDelegate connectionDelegate)
+   at Microsoft.AspNetCore.Http.Connections.Internal.HttpConnectionContext.WaitOnTasks(Task applicationTask, Task transportTask, Boolean closeGracefully)
+   at Microsoft.AspNetCore.Http.Connections.Internal.HttpConnectionContext.DisposeAsync(Boolean closeGracefully)
+   at Microsoft.AspNetCore.Http.Connections.Internal.HttpConnectionManager.DisposeAndRemoveAsync(HttpConnectionContext connection, Boolean closeGracefully)
+2021-08-15 22:08:40,260 [23] ERROR Microsoft.AspNetCore.SignalR.HubConnectionHandler - Error when dispatching 'OnDisconnectedAsync' on hub.
+System.ArgumentNullException: Value cannot be null. (Parameter 'connectionId')
+   at Microsoft.AspNetCore.SignalR.DefaultHubLifetimeManager`1.RemoveFromGroupAsync(String connectionId, String groupName, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.SignalR.Internal.GroupManager`1.RemoveFromGroupAsync(String connectionId, String groupName, CancellationToken cancellationToken)
+   at NetCoreFrame.WebUI.Views.Hubs.SignalrHubs.OnDisconnectedAsync(Exception exception) in D:\MyPrj\2021\ESOP\代码\NetCoreFrame.WebUI\Hubs\SignalrHubs.cs:line 41
+   at Microsoft.AspNetCore.SignalR.Internal.DefaultHubDispatcher`1.OnDisconnectedAsync(HubConnectionContext connection, Exception exception)
+   at Microsoft.AspNetCore.SignalR.Internal.DefaultHubDispatcher`1.OnDisconnectedAsync(HubConnectionContext connection, Exception exception)
+   at Microsoft.AspNetCore.SignalR.HubConnectionHandler`1.HubOnDisconnectedAsync(HubConnectionContext connection, Exception exception)
+2021-08-15 22:08:40,277 [23] ERROR Microsoft.AspNetCore.Http.Connections.Internal.HttpConnectionManager - Failed disposing connection yWRVmKWElYgh-Vrs9eiELw.
+System.ArgumentNullException: Value cannot be null. (Parameter 'connectionId')
+   at Microsoft.AspNetCore.SignalR.DefaultHubLifetimeManager`1.RemoveFromGroupAsync(String connectionId, String groupName, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.SignalR.Internal.GroupManager`1.RemoveFromGroupAsync(String connectionId, String groupName, CancellationToken cancellationToken)
+   at NetCoreFrame.WebUI.Views.Hubs.SignalrHubs.OnDisconnectedAsync(Exception exception) in D:\MyPrj\2021\ESOP\代码\NetCoreFrame.WebUI\Hubs\SignalrHubs.cs:line 41
+   at Microsoft.AspNetCore.SignalR.Internal.DefaultHubDispatcher`1.OnDisconnectedAsync(HubConnectionContext connection, Exception exception)
+   at Microsoft.AspNetCore.SignalR.Internal.DefaultHubDispatcher`1.OnDisconnectedAsync(HubConnectionContext connection, Exception exception)
+   at Microsoft.AspNetCore.SignalR.HubConnectionHandler`1.HubOnDisconnectedAsync(HubConnectionContext connection, Exception exception)
+   at Microsoft.AspNetCore.SignalR.HubConnectionHandler`1.RunHubAsync(HubConnectionContext connection)
+   at Microsoft.AspNetCore.SignalR.HubConnectionHandler`1.OnConnectedAsync(ConnectionContext connection)
+   at Microsoft.AspNetCore.SignalR.HubConnectionHandler`1.OnConnectedAsync(ConnectionContext connection)
+   at Microsoft.AspNetCore.Http.Connections.Internal.HttpConnectionContext.ExecuteApplication(ConnectionDelegate connectionDelegate)
+   at Microsoft.AspNetCore.Http.Connections.Internal.HttpConnectionContext.WaitOnTasks(Task applicationTask, Task transportTask, Boolean closeGracefully)
+   at Microsoft.AspNetCore.Http.Connections.Internal.HttpConnectionContext.DisposeAsync(Boolean closeGracefully)
+   at Microsoft.AspNetCore.Http.Connections.Internal.HttpConnectionManager.DisposeAndRemoveAsync(HttpConnectionContext connection, Boolean closeGracefully)
+2021-08-15 22:11:32,608 [35] ERROR Microsoft.AspNetCore.SignalR.HubConnectionHandler - Error when dispatching 'OnDisconnectedAsync' on hub.
+System.ArgumentNullException: Value cannot be null. (Parameter 'connectionId')
+   at Microsoft.AspNetCore.SignalR.DefaultHubLifetimeManager`1.RemoveFromGroupAsync(String connectionId, String groupName, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.SignalR.Internal.GroupManager`1.RemoveFromGroupAsync(String connectionId, String groupName, CancellationToken cancellationToken)
+   at NetCoreFrame.WebUI.Views.Hubs.SignalrHubs.OnDisconnectedAsync(Exception exception) in D:\MyPrj\2021\ESOP\代码\NetCoreFrame.WebUI\Hubs\SignalrHubs.cs:line 41
+   at Microsoft.AspNetCore.SignalR.Internal.DefaultHubDispatcher`1.OnDisconnectedAsync(HubConnectionContext connection, Exception exception)
+   at Microsoft.AspNetCore.SignalR.Internal.DefaultHubDispatcher`1.OnDisconnectedAsync(HubConnectionContext connection, Exception exception)
+   at Microsoft.AspNetCore.SignalR.HubConnectionHandler`1.HubOnDisconnectedAsync(HubConnectionContext connection, Exception exception)
+2021-08-15 22:11:32,611 [35] ERROR Microsoft.AspNetCore.Http.Connections.Internal.HttpConnectionManager - Failed disposing connection IS0xJW08-wev0grH2H_rFg.
+System.ArgumentNullException: Value cannot be null. (Parameter 'connectionId')
+   at Microsoft.AspNetCore.SignalR.DefaultHubLifetimeManager`1.RemoveFromGroupAsync(String connectionId, String groupName, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.SignalR.Internal.GroupManager`1.RemoveFromGroupAsync(String connectionId, String groupName, CancellationToken cancellationToken)
+   at NetCoreFrame.WebUI.Views.Hubs.SignalrHubs.OnDisconnectedAsync(Exception exception) in D:\MyPrj\2021\ESOP\代码\NetCoreFrame.WebUI\Hubs\SignalrHubs.cs:line 41
+   at Microsoft.AspNetCore.SignalR.Internal.DefaultHubDispatcher`1.OnDisconnectedAsync(HubConnectionContext connection, Exception exception)
+   at Microsoft.AspNetCore.SignalR.Internal.DefaultHubDispatcher`1.OnDisconnectedAsync(HubConnectionContext connection, Exception exception)
+   at Microsoft.AspNetCore.SignalR.HubConnectionHandler`1.HubOnDisconnectedAsync(HubConnectionContext connection, Exception exception)
+   at Microsoft.AspNetCore.SignalR.HubConnectionHandler`1.RunHubAsync(HubConnectionContext connection)
+   at Microsoft.AspNetCore.SignalR.HubConnectionHandler`1.OnConnectedAsync(ConnectionContext connection)
+   at Microsoft.AspNetCore.SignalR.HubConnectionHandler`1.OnConnectedAsync(ConnectionContext connection)
+   at Microsoft.AspNetCore.Http.Connections.Internal.HttpConnectionContext.ExecuteApplication(ConnectionDelegate connectionDelegate)
+   at Microsoft.AspNetCore.Http.Connections.Internal.HttpConnectionContext.WaitOnTasks(Task applicationTask, Task transportTask, Boolean closeGracefully)
+   at Microsoft.AspNetCore.Http.Connections.Internal.HttpConnectionContext.DisposeAsync(Boolean closeGracefully)
+   at Microsoft.AspNetCore.Http.Connections.Internal.HttpConnectionManager.DisposeAndRemoveAsync(HttpConnectionContext connection, Boolean closeGracefully)
