@@ -103,7 +103,8 @@ namespace NetCoreFrame.Service
                                UserName = a.UserName,
                                LoginID = a.LoginID,
                                RoleName = temp.RoleName,
-                               CreateTime=a.CreateTime
+                               CreateTime=a.CreateTime,
+                               EquipId=a.EquipId
                            };
 
             userlist = userlist.OrderByDescending(s=>s.RoleName).Skip((request.page - 1) * request.limit).Take(request.limit);
@@ -165,6 +166,7 @@ namespace NetCoreFrame.Service
                 UserName=model.UserName,
                 RoleID = model.RoleID, 
                 Password = MD5Helper.Get32MD5(model.Password), 
+                EquipId=model.EquipId
             });
             #endregion
 

@@ -5,6 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using NetCoreFrame.Entity.Wedrent;
+using NetCoreFrame.Entity.Water;
 
 namespace NetCoreFrame.Entity
 {
@@ -70,6 +71,12 @@ namespace NetCoreFrame.Entity
         public DbSet<W_Order> W_Order { get; set; }
         public DbSet<W_Order_Goods> W_Order_Goods { get; set; }
 
+        #endregion
+
+        #region 水质
+        public DbSet<Water_Equipment> Water_Equipment { get; set; }
+        public DbSet<Water_Gas> Water_Gas { get; set; }
+        public DbSet<Water_Quality> Water_Quality { get; set; }
         #endregion
 
     }

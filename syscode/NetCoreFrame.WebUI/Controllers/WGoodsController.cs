@@ -1,34 +1,31 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.Mvc;
 using NetCoreFrame.Core.CommonHelper;
 using NetCoreFrame.Core.Request;
 using NetCoreFrame.Core.Response;
-using NetCoreFrame.Entity.FrameEntity;
+using NetCoreFrame.Entity.Wedrent;
 using NetCoreFrame.Service;
 using NetCoreFrame.WebUI.Extensions;
-using Microsoft.AspNetCore.Mvc;
-using NetCoreFrame.WebUI.Views.Hubs;
-using Microsoft.AspNetCore.SignalR;
-using NetCoreFrame.Entity.Wedrent;
+using System;
 
 namespace NetCoreFrame.WebUI.Controllers
 {
     public class WGoodsController : Controller
     {
         private readonly WGoodsService _service;
-      
-        public WGoodsController(WGoodsService service )
+
+        public WGoodsController(WGoodsService service)
         {
             _service = service;
-         
+
         }
         public IActionResult WGoods_Index()
         {
             return View();
         }
-        public string All(PageRequest request,string GoodsName,string GoodsNumber)
+        public string All(PageRequest request, string GoodsName, string GoodsNumber)
         {
             TableData data = new TableData();
-            data = _service.Load(request, GoodsName,GoodsNumber);
+            data = _service.Load(request, GoodsName, GoodsNumber);
             return JsonHelper.Instance.Serialize(data);
         }
 
@@ -56,7 +53,7 @@ namespace NetCoreFrame.WebUI.Controllers
             {
 
                 model.CreateBy = CurrentUser.UserName;
-                _service.Add(model); 
+                _service.Add(model);
             }
             catch (Exception e)
             {
@@ -94,7 +91,7 @@ namespace NetCoreFrame.WebUI.Controllers
             try
             {
                 _service.Update(model);
-               
+
             }
             catch (Exception e)
             {
@@ -105,12 +102,12 @@ namespace NetCoreFrame.WebUI.Controllers
         }
 
         [HttpGet]
-        public string GetNotRentGoods(string weddingDate,string OrderId,string GoodsList)
+        public string GetNotRentGoods(string weddingDate, string OrderId, string GoodsList)
         {
             PageResponse resp = new PageResponse();
             try
-            { 
-                resp.Result= _service.GetNotRentGoods(Convert.ToDateTime(weddingDate), OrderId, GoodsList);  
+            {
+                resp.Result = _service.GetNotRentGoods(Convert.ToDateTime(weddingDate), OrderId, GoodsList);
             }
             catch (Exception e)
             {
