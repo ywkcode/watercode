@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.29519.87
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.32210.238
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NetCoreFrame.Core", "NetCoreFrame.Core\NetCoreFrame.Core.csproj", "{268342D9-F649-488E-96B7-8E44B5E99508}"
 EndProject
@@ -12,6 +12,8 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NetCoreFrame.Service", "NetCoreFrame.Service\NetCoreFrame.Service.csproj", "{FFD22119-7D4C-4AD9-B162-3BE10C0C7C84}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NetCoreFrame.WebUI", "NetCoreFrame.WebUI\NetCoreFrame.WebUI.csproj", "{5EAC6AAD-8628-4E9F-9C56-98FBEA6DED43}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetCoreFrame.SocketConsole", "NetCoreFrame.Socket\NetCoreFrame.SocketConsole.csproj", "{F102648A-4CEF-4934-91F3-1A2034EE7419}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{5EAC6AAD-8628-4E9F-9C56-98FBEA6DED43}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5EAC6AAD-8628-4E9F-9C56-98FBEA6DED43}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5EAC6AAD-8628-4E9F-9C56-98FBEA6DED43}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F102648A-4CEF-4934-91F3-1A2034EE7419}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F102648A-4CEF-4934-91F3-1A2034EE7419}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F102648A-4CEF-4934-91F3-1A2034EE7419}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F102648A-4CEF-4934-91F3-1A2034EE7419}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

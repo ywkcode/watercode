@@ -393,6 +393,7 @@
 
   <ItemGroup>
     <Folder Include="wwwroot\js\wangEditor\" />
+    <Folder Include="wwwroot\upload\" />
   </ItemGroup>
 
 

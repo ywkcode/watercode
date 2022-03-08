@@ -13,3 +13,6 @@
 /syscode/NetCoreFrame.WebUI/log
 /syscode/NetCoreFrame.WebUI/bin
 /syscode/NetCoreFrame.Entity/Migrations
+/syscode/NetCoreFrame.Socket/obj
+/syscode/NetCoreFrame.Socket/bin
+/syscode/NetCoreFrameLog
