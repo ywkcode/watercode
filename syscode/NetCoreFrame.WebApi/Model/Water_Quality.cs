@@ -1,20 +1,12 @@
-﻿using NetCoreFrame.Entity.BaseEntity;
-using System;
-using System.ComponentModel;
+﻿using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
-namespace NetCoreFrame.Entity.Water
-{
-    /// <summary>
-    /// 水质
-    /// </summary>
-    public class Water_Quality 
-    {
-        [StringLength(50)]
-        public string ID { get; set; } = Guid.NewGuid().ToString();
 
+namespace NetCoreFrame.WebApi.Model
+{
+    public class Water_Quality:BaseModel
+    {
         [Display(Name = "设备Id")]
-        [Description("设备Id")]
-        [StringLength(50, ErrorMessage = "{0}最多输入{1}个字符")]
+        [Description("设备Id")] 
         public string EquipId { get; set; }
 
 
@@ -37,8 +29,5 @@ namespace NetCoreFrame.Entity.Water
         [Display(Name = "流量")]
         [Description("流量")]
         public decimal LL { get; set; }
-
-        [Display(Name = "创建日期")]
-        public DateTime CreateTime { get; set; }
     }
 }

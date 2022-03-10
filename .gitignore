@@ -16,3 +16,6 @@
 /syscode/NetCoreFrame.Socket/obj
 /syscode/NetCoreFrame.Socket/bin
 /syscode/NetCoreFrameLog
+/syscode/NetCoreFrame.WebApi/Properties
+/syscode/NetCoreFrame.WebApi/bin
+/syscode/NetCoreFrame.WebApi/obj

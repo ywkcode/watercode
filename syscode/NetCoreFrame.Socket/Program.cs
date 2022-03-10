@@ -16,7 +16,8 @@ namespace NetCoreFrame.SocketConsole
         static void Main(string[] args)
         {
             Console.WriteLine("启动成功!");
-           
+            string testStr = @"##0211ST=32;CN=2011;PW=123456;MN=75028040410058;Flag=0;CP=&&DataTime=20220307213930;001-Rtd=7.6614,001-Flag=N;B01-Rtd=23.0607,B01-Flag=N;060-Rtd=2.8810,060-Flag=N;011-Rtd=22.9000,011-Flag=N;101-Rtd=0.0476,101-Flag=N&&8D01";
+            var  aa=RegexHelper.GetValue(testStr, "101-Rtd=", ",");
             Task.Run(() =>
             {
                 Console.WriteLine("启动一个Socket服务端");

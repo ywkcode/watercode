@@ -1,22 +1,12 @@
-﻿using NetCoreFrame.Entity.BaseEntity;
-using System;
-using System.ComponentModel;
+﻿using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 
-namespace NetCoreFrame.Entity.Water
+namespace NetCoreFrame.WebApi.Model
 {
-    /// <summary>
-    /// 气体
-    /// </summary>
-    public class Water_Gas  
+    public class Water_Gas:BaseModel
     {
-        [StringLength(50)]
-        public string ID { get; set; } = Guid.NewGuid().ToString();
-
-
         [Display(Name = "设备Id")]
-        [Description("设备Id")]
-        [StringLength(50, ErrorMessage = "{0}最多输入{1}个字符")]
+        [Description("设备Id")] 
         public string EquipId { get; set; }
 
 
@@ -35,8 +25,5 @@ namespace NetCoreFrame.Entity.Water
         [Display(Name = "氨气")]
         [Description("氨气")]
         public decimal NH3 { get; set; }
-
-        [Display(Name = "创建日期")]
-        public DateTime CreateTime { get; set; }
     }
 }
