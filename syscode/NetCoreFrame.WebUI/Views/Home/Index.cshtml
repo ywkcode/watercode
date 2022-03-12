@@ -38,6 +38,9 @@
                 </ul>*@
             <!-- 顶部右侧菜单 -->
             <ul class="layui-nav top_menu">
+                 <li class="layui-nav-item" pc>
+                    <a href='@Url.Action("DataIndex","Home")' ><i class="layui-icon" data-icon="&#xe629;">&#xe629;</i><cite>大屏</cite><span class="layui-badge-dot"></span></a>
+                </li>
                 <li class="layui-nav-item" pc>
                     <a href="javascript:;" class="clearCache"><i class="layui-icon" data-icon="&#xe640;">&#xe640;</i><cite>清除缓存</cite><span class="layui-badge-dot"></span></a>
                 </li>
@@ -115,10 +118,10 @@
                             统计信息
                         </blockquote>
                         <div id="main" style="width: 650px;height:350px;margin:0 auto;"></div>*@
-                    <blockquote class="layui-elem-quote layui-text">
+                    <blockquote class="layui-elem-quote layui-text" style="display:none">
                         联系我们
                     </blockquote>
-                    <table class="layui-table" lay-skin="line">
+                    <table class="layui-table" lay-skin="line" style="display:none">
                         <colgroup>
                             <col width="150">
                             <col width="200">

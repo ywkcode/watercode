@@ -19,8 +19,16 @@ namespace NetCoreFrame.Core.CommonHelper
         /// <returns></returns> 
         public static string GetValue(string str, string s, string e)
         {
-            Regex rg = new Regex("(?<=(" + s + "))[.\\s\\S]*?(?=(" + e + "))", RegexOptions.Multiline | RegexOptions.Singleline);
-            return rg.Match(str).Value;
+             
+            if (str.IndexOf(s) > -1 && str.IndexOf(e) > -1)
+            {
+                Regex rg = new Regex("(?<=(" + s + "))[.\\s\\S]*?(?=(" + e + "))", RegexOptions.Multiline | RegexOptions.Singleline);
+                return rg.Match(str).Value;
+            }
+            else
+            {
+                return "0";
+            }
         }
     }
 }
