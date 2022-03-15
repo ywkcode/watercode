@@ -65,17 +65,16 @@ namespace NetCoreFrame.WebUI.Controllers
             //水质
             data.waterDatas.Add(new WaterData() { DataName = "COD(mg/L)", Data_Stand = "50.000", Data_Real = quality?.TOC.ToString("0.000") ?? "0.000" });
             data.waterDatas.Add(new WaterData() { DataName = "氨氮(mg/L)", Data_Stand = "50.000", Data_Real = quality?.AD.ToString("0.000") ?? "0.000" });
-            data.waterDatas.Add(new WaterData() { DataName = "总磷(mg/L)", Data_Stand = "0.500", Data_Real = quality?.ZL.ToString("0.000") ?? "0.000" });
+            data.waterDatas2.Add(new WaterData() { DataName = "总磷(mg/L)", Data_Stand = "0.500", Data_Real = quality?.ZL.ToString("0.000") ?? "0.000" });
             data.waterDatas2.Add(new WaterData() { DataName = "PH(无量纲)", Data_Stand = "6-9", Data_Real = quality?.PH.ToString("0.000") ?? "0.000" });
-            data.waterDatas2.Add(new WaterData() { DataName = "流量", Data_Stand = "--", Data_Real = quality?.LL.ToString("0.000") ?? "0.000" });
-
+           
             //气体
-            data.waterDatas2.Add(new WaterData() { DataName = "硫化氢(mg/m3)", Data_Stand = "0.060", Data_Real = gas?.H2S.ToString("0.000") ?? "0.000" });
+            data.waterDatas3.Add(new WaterData() { DataName = "硫化氢(mg/m3)", Data_Stand = "0.060", Data_Real = gas?.H2S.ToString("0.000") ?? "0.000" });
             data.waterDatas3.Add(new WaterData() { DataName = "氯化氢(mg/m3)", Data_Stand = "0.150", Data_Real = gas?.HCL.ToString("0.000") ?? "0.000" });
-            data.waterDatas3.Add(new WaterData() { DataName = "氯气(mg/m3)", Data_Stand = "0.500", Data_Real = gas?.CL2.ToString("0.000") ?? "0.000" });
-            data.waterDatas3.Add(new WaterData() { DataName = "氨气(mg/m3)", Data_Stand = "1.000", Data_Real = gas?.NH3.ToString("0.000") ?? "0.000" });
-            
+            data.waterDatas4.Add(new WaterData() { DataName = "氯气(mg/m3)", Data_Stand = "0.500", Data_Real = gas?.CL2.ToString("0.000") ?? "0.000" });
+            data.waterDatas4.Add(new WaterData() { DataName = "氨气(mg/m3)", Data_Stand = "1.000", Data_Real = gas?.NH3.ToString("0.000") ?? "0.000" });
 
+            data.NowDate = DateTime.Now.ToString("yyyy-MM-dd HH:mm");
             return data;
         }
 

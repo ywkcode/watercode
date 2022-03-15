@@ -151,7 +151,7 @@ namespace NetCoreFrame.WebUI
             {
                 endpoints.MapControllerRoute(
                     name: "default",
-                    pattern: "{controller=Account}/{action=Login}/{id?}");
+                    pattern: "{controller=Home}/{action=DataIndex}/{id?}");
                 endpoints.MapHub<SignalrHubs>("/hub");
             });
 

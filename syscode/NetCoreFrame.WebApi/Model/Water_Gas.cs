@@ -1,4 +1,5 @@
-﻿using System.ComponentModel;
+﻿using System;
+using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 
 namespace NetCoreFrame.WebApi.Model
@@ -25,5 +26,7 @@ namespace NetCoreFrame.WebApi.Model
         [Display(Name = "氨气")]
         [Description("氨气")]
         public decimal NH3 { get; set; }
+
+        public DateTime CreateTime { get; set; }
     }
 }

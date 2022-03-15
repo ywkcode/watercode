@@ -30,6 +30,7 @@ namespace NetCoreFrame.Entity.BaseEntity
         [Display(Name = "创建时间")]
         [Description("创建时间")]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        [Column("createtime")]
         public DateTime? CreateTime { get; set; } = DateTime.Now;
 
         /// <summary>
@@ -38,6 +39,7 @@ namespace NetCoreFrame.Entity.BaseEntity
         [Display(Name = "创建人")]
         [Description("创建人")]
         [StringLength(50, ErrorMessage = "{0}最多输入{1}个字符")]
+        [Column("createby")]
         public string CreateBy { get; set; }
 
         /// <summary>
@@ -46,6 +48,7 @@ namespace NetCoreFrame.Entity.BaseEntity
         [Display(Name = "修改时间")]
         [Description("修改时间")]
         [DatabaseGenerated(DatabaseGeneratedOption.Computed)]
+        [Column("updatetime")]
         public DateTime? UpdateTime { get; set; } = DateTime.Now;
 
         /// <summary>
@@ -54,6 +57,7 @@ namespace NetCoreFrame.Entity.BaseEntity
         [Display(Name = "修改人")]
         [Description("修改人")]
         [StringLength(50, ErrorMessage = "{0}最多输入{1}个字符")]
+        [Column("updateby")]
         public string UpdateBy { get; set; }
 
         /// <summary>
@@ -61,6 +65,7 @@ namespace NetCoreFrame.Entity.BaseEntity
         /// </summary>
         [Display(Name = "排序")]
         [Description("排序")]
+        [Column("sort")]
         public int Sort { get; set; }
 
         /// <summary>
@@ -69,6 +74,7 @@ namespace NetCoreFrame.Entity.BaseEntity
         [Display(Name = "状态")]
         [Description("状态")]
         [StringLength(50)]
+        [Column("status")]
         public string Status { get; set; }
 
         /// <summary>
@@ -76,6 +82,7 @@ namespace NetCoreFrame.Entity.BaseEntity
         /// </summary>
         [Display(Name = "是否删除")]
         [Description("是否删除")]
+        [Column("isdeleted")]
         public TrueOrFlase IsDeleted { get; set; }
     }
 }

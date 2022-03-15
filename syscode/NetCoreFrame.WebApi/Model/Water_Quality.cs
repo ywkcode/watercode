@@ -1,4 +1,5 @@
-﻿using System.ComponentModel;
+﻿using System;
+using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 
 namespace NetCoreFrame.WebApi.Model
@@ -29,5 +30,7 @@ namespace NetCoreFrame.WebApi.Model
         [Display(Name = "流量")]
         [Description("流量")]
         public decimal LL { get; set; }
+
+        public DateTime CreateTime { get; set; }
     }
 }

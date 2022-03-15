@@ -11,6 +11,7 @@ namespace NetCoreFrame.Entity.FrameEntity
     /// <summary>
     /// 数据字典
     /// </summary>
+    [Table("frame_codes")]
     public class Frame_Codes : CoreBaseEntity
     {
         /// <summary>
@@ -19,6 +20,7 @@ namespace NetCoreFrame.Entity.FrameEntity
         [Display(Name = "字典名称")]
         [Description("字典名称")]
         [StringLength(100)]
+        [Column("codename")]
         public string CodeName { get; set; }
 
         /// <summary>
@@ -27,6 +29,7 @@ namespace NetCoreFrame.Entity.FrameEntity
         //[ScaffoldColumn(false)]
         [Display(Name = "CodeID")]
         [Description("CodeID")]
+        [Column("codeid")]
         //[DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int CodeID { get; set; }
     }

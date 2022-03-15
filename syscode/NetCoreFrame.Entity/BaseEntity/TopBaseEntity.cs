@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Text;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+
 namespace NetCoreFrame.Entity.BaseEntity
 {
     /// <summary>
@@ -14,6 +16,7 @@ namespace NetCoreFrame.Entity.BaseEntity
 
         private string _id;
 
+        [Column("id")]
         [StringLength(50)]
         public string ID
         {

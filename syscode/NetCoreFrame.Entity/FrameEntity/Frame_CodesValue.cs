@@ -10,13 +10,15 @@ namespace NetCoreFrame.Entity.FrameEntity
     /// <summary>
     /// 字典内容
     /// </summary>
+    [Table("frame_codesvalue")]
     public class Frame_CodesValue : CoreBaseEntity
     {
         /// <summary>
         /// PID
         /// </summary>
         [Display(Name = "PID")]
-        [Description("PID")] 
+        [Description("PID")]
+        [Column("pid")]
         public int PID { get; set; }
 
 
@@ -27,6 +29,7 @@ namespace NetCoreFrame.Entity.FrameEntity
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
         [Display(Name = "CodeValueID")]
         [Description("CodeValueID")]
+        [Column("codevalueid")]
         public int CodeValueID { get; set; }
 
         /// <summary>
@@ -35,6 +38,7 @@ namespace NetCoreFrame.Entity.FrameEntity
         [Display(Name = "字典名称")]
         [Description("字典名称")]
         [StringLength(100)]
+        [Column("itemname")]
         public string ItemName { get; set; }
 
         /// <summary>
@@ -43,7 +47,7 @@ namespace NetCoreFrame.Entity.FrameEntity
         [Display(Name = "字典值")]
         [Description("字典值")]
         [StringLength(100)]
-       
+        [Column("itemvalue")]
         public string ItemValue { get; set; }
 
         /// <summary>
@@ -52,6 +56,7 @@ namespace NetCoreFrame.Entity.FrameEntity
         [Display(Name = "字典名称英文")]
         [Description("字典名称英文")]
         [StringLength(100)]
+        [Column("itemeng")]
         public string ItemEng { get; set; }
 
 

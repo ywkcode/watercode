@@ -3,7 +3,9 @@ using NetCoreFrame.WebApi.Repository;
 
 namespace NetCoreFrame.WebApi.Service
 {
-    public class DataServicee : Repository<Water_Gas>
+    public class Water_QualityService : Repository<Water_Quality>
     {
+
+        
     }
 }

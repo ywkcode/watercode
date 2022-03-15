@@ -1,31 +1,27 @@
 <template>
 	<view>
       
-	
-		<gauge :testdata="mytestdata"></gauge>
-		  <view class="u-padding-40">水质</view>
-		<view class="mytag">
-			<u-tag text="TOC(5mg/l)" type="warning" class="mytab_inner"></u-tag>
-			<u-tag text="氨氮( 5mg/l)" type="warning" class="mytab_inner"></u-tag>
-			<u-tag text="总磷(4mg/L)" type="warning" class="mytab_inner"></u-tag>
-			<u-tag text="PH(0-14.000)" type="warning" class="mytab_inner"></u-tag>
-			<u-tag text="流量(0-5000.000)" type="warning" class="mytab_inner"></u-tag>
-
-		</view>
- <view class="u-padding-40">废气</view>
-		<view class="mytag">
-			<u-tag text="硫化氢（0-30mg/m3）" type="error" class="mytab_inner"></u-tag>
-			<u-tag text="氯化氢(0-5mg/m3)" type="error" class="mytab_inner"></u-tag>
-			<u-tag text="氯气（0-15mg/m3）" type="error" class="mytab_inner"></u-tag>
-			<u-tag text="氨气（0-90mg/m3）" type="error" class="mytab_inner"></u-tag>
-
-
-		</view>
-		<view class="u-padding-40">实时折线图</view>
+	     <u-subsection :list="list" :current="0"></u-subsection>
+		 <myarcbar :testdata="mytestdata"></myarcbar>
+		 <view class="myouttext">
+			<view class="mytext"><view class="mytext_inner">TOC</view><u-tag text="20ml/g"  plainFill  plain   type="success"></u-tag></view>
+			<view class="mytext"><view class="mytext_inner">氨氮</view><u-tag text="20ml/g"  plainFill   type="warning"></u-tag></view>
+			<view class="mytext"><view class="mytext_inner">总磷</view><u-tag text="20ml/g" plainFill     type="warning"></u-tag></view>
+			<view class="mytext"><view class="mytext_inner">PH</view><u-tag text="20ml/g"  plainFill   type="success"></u-tag></view>
+			<view class="mytext"><view class="mytext_inner">流量</view><u-tag text="20ml/g"   plainFill   type="success"></u-tag></view>
+		 </view>
+		
+		<u-gap height="10" bgColor="#bbb"></u-gap>
+		<view class="u-padding-20 mytitle">实时折线图</view>
+		<u-gap height="3" bgColor="#bbb"></u-gap>
 		<myarea :testdata="mytestdata"></myarea>
-		<view class="u-padding-40">实时监测数据</view>
+		
+		<u-gap height="10" bgColor="#bbb"></u-gap>
+	    <view class="u-padding-20 mytitle">实时监测数据</view>
+		<u-gap height="3" bgColor="#bbb"></u-gap> 
 		<mytable></mytable>
-
+		 
+       
 	</view>
 </template>
 
@@ -42,10 +38,10 @@
 					title: '测试1'
 				},
 				opts: {},
-				list: ['TOC(5mg/l)', '氨氮( 5mg/l)', '总磷(4mg/L)', 'PH(0-14.000)', '流量(0-5000.000)'],
+				list: ['水质','气体'],
 				// 或者如下，也可以配置keyName参数修改对象键名
 				// list: [{name: '未付款'}, {name: '待评价'}, {name: '已付款'}],
-				current: 1,
+				current: 0,
 
 			}
 		},
@@ -79,11 +75,23 @@
 		justify-content: center;
 		align-items: center;
 	}
-
-	.mytag {
+	.myouttext{
+		padding: 10rpx;
+		text-align: center;
+	}    
+	.mytext {
+		display: inline-block;
+		padding: 10rpx;
+	}
+	.mytext_inner{
+		padding-bottom: 5rpx;
+	}
+		.mytag {
 		padding: 0 60rpx 0 60rpx;
 	}
-
+    .mytitle{
+		text-align: center;
+	}
 	.mytab_inner {
 		margin: 0 10rpx 10rpx 0;
 	}

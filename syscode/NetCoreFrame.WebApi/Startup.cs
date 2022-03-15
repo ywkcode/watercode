@@ -5,8 +5,12 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using Microsoft.Extensions.PlatformAbstractions;
+using Microsoft.OpenApi.Models;
+using NetCoreFrame.WebApi.Service;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -27,6 +31,8 @@ namespace NetCoreFrame.WebApi
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
+            services.AddScoped<Water_GasService, Water_GasService>();
+            services.AddScoped<Water_QualityService, Water_QualityService>();
             #region cors
             services.AddCors(options =>
             {
@@ -40,6 +46,13 @@ namespace NetCoreFrame.WebApi
                     });
             });
             #endregion
+
+            #region Swagger
+            services.AddSwaggerGen(c =>
+            {
+                c.SwaggerDoc("v1", new OpenApiInfo { Title = "水质监测", Version = "v1" });
+            });
+            #endregion
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -48,6 +61,8 @@ namespace NetCoreFrame.WebApi
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
+                app.UseSwagger();
+                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "水质监测"));
             }
 
             app.UseRouting();
@@ -55,7 +70,15 @@ namespace NetCoreFrame.WebApi
             #region UseCors
             app.UseCors(CorsAny);
             #endregion
-
+            #region Swagger
+            app.UseSwagger();
+            app.UseSwaggerUI(options =>
+            {
+                options.SwaggerEndpoint("/swagger/v1/swagger.json", "ApiHelp V1");
+                //如果设置根目录为swagger,将此值置空
+                options.RoutePrefix = string.Empty;
+            });
+            #endregion
 
             app.UseAuthorization();
 
