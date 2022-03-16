@@ -3,19 +3,31 @@
 		"^u-(.*)": "@/uview-ui/components/u-$1/u-$1.vue"
 	},
 	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+	    {
+            "path" : "pages/login/index",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "修水赣北钨业有限公司-总排口监测点",
+                "enablePullDownRefresh": false
+            } 
+        },
 		{
-			"path": "pages/index/index",
-		     "style": {
-			"navigationBarTitleText": "首页"
-		    }
+		    "path" : "pages/index/index",
+		    "style" :                                                                                    
+		    {
+		        "navigationBarTitleText": "修水赣北钨业有限公司-总排口监测点",
+		        "enablePullDownRefresh": false
+		    } 
 		},
 		{
-			"path": "pages/center/index",
-			"style": {
-				"navigationBarTitleText": "首页"
-			}
+		    "path" : "pages/center/index",
+		    "style" :                                                                                    
+		    {
+		        "navigationBarTitleText": "修水赣北钨业有限公司-总排口监测点",
+		        "enablePullDownRefresh": false
+		    } 
 		}
-	],
+    ],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",
 		"navigationBarTitleText": "uView",
@@ -27,16 +39,19 @@
 	    "selectedColor": "#303133",
 	    "borderStyle": "black",
 	    "backgroundColor": "#ffffff",
-	    "list": [{
-	        "pagePath": "pages/index/index",
-	        "iconPath": "static/index.png",
-	        "selectedIconPath": "static/index-selected.png",
-	        "text": "首页"
-	    }, {
+	    "list": [ 
+			{
+			"pagePath": "pages/index/index",
+			"iconPath": "static/index.png",
+			"selectedIconPath": "static/index-selected.png",
+			"text": "首页"
+			}, 
+			{
 	        "pagePath": "pages/center/index",
 	        "iconPath": "static/center.png",
 	        "selectedIconPath": "static/center-selected.png",
-	        "text": "我"
-	    }]
+	        "text": "数据看板"
+	        } 
+		]
 	}
 }
