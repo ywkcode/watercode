@@ -46,7 +46,7 @@ namespace NetCoreFrame.SocketConsole
                 }
                 catch (Exception ex)
                 {
-                    Console.WriteLine($"水质监听异常:{ex.Message},时间：{DateTime.Now.ToString("yyyy - MM - dd HH: mm")}");
+                    //Console.WriteLine($"水质监听异常:{ex.Message},时间：{DateTime.Now.ToString("yyyy - MM - dd HH: mm")}");
                     restartTime++;
                     if (restartTime <= 3)
                     {
@@ -88,7 +88,7 @@ namespace NetCoreFrame.SocketConsole
                 catch (Exception ex)
                 {
 
-                    Console.WriteLine($"气体监听异常:{ex.Message},时间：{DateTime.Now.ToString("yyyy - MM - dd HH: mm")}");
+                    //Console.WriteLine($"气体监听异常:{ex.Message},时间：{DateTime.Now.ToString("yyyy - MM - dd HH: mm")}");
                     restartTime++;
                     if (restartTime <= 3)
                     {
@@ -165,13 +165,13 @@ namespace NetCoreFrame.SocketConsole
                     }
                     else
                     {
-                        Console.WriteLine($"Quality Receive Message：接收到乱码并过滤：{recStr}，长度：{recStr.Length}");
+                        //Console.WriteLine($"Quality Receive Message：接收到乱码并过滤：{recStr}，长度：{recStr.Length}");
                     }
                    
                 }
                 catch (Exception ex)
                 {
-                    Console.WriteLine($"Quality Receive Message Error：{ex.Message}");
+                    //Console.WriteLine($"Quality Receive Message Error：{ex.Message}");
                 }
                
 
@@ -199,12 +199,12 @@ namespace NetCoreFrame.SocketConsole
                     }
                     else
                     {
-                        Console.WriteLine($"Gas Receive Message：接收到乱码并过滤:{recStr}");
+                        //Console.WriteLine($"Gas Receive Message：接收到乱码并过滤:{recStr}");
                     }
                 }
                 catch (Exception ex)
                 {
-                    Console.WriteLine($"Gas Receive Message Error：{ex.Message}");
+                    //Console.WriteLine($"Gas Receive Message Error：{ex.Message}");
                 }
                 
               
