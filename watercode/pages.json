@@ -8,7 +8,7 @@
             "style" :                                                                                    
             {
                 "navigationBarTitleText": "修水赣北钨业有限公司-总排口监测点",
-                "enablePullDownRefresh": false
+                "enablePullDownRefresh": false 
             } 
         },
 		{
@@ -16,7 +16,23 @@
 		    "style" :                                                                                    
 		    {
 		        "navigationBarTitleText": "修水赣北钨业有限公司-总排口监测点",
-		        "enablePullDownRefresh": false
+		        "enablePullDownRefresh": false, 
+				"navigationStyle":"default",
+				"app-plus": {
+				          
+				          "titleNView": {
+				              "buttons": [ //原生标题栏按钮配置,
+				                  {
+				           		    "type":"none",
+				           		    "text":"退出",
+				           		    "float":"right",
+									"fontSize":"12px"
+				                  }
+				               ]
+				           }
+				       }
+				 
+
 		    } 
 		},
 		{
@@ -24,21 +40,27 @@
 		    "style" :                                                                                    
 		    {
 		        "navigationBarTitleText": "修水赣北钨业有限公司-总排口监测点",
-		        "enablePullDownRefresh": false
+		        "enablePullDownRefresh": false,
+				"navigationStyle":"default"
+			  
+				
 		    } 
 		}
     ],
+	
 	"globalStyle": {
 		"navigationBarTextStyle": "black",
 		"navigationBarTitleText": "uView",
 		"navigationBarBackgroundColor": "#F8F8F8",
 		"backgroundColor": "#F8F8F8"
+		 
 	},
 	"tabBar": {
 	    "color": "#909399",
 	    "selectedColor": "#303133",
 	    "borderStyle": "black",
 	    "backgroundColor": "#ffffff",
+		 
 	    "list": [ 
 			{
 			"pagePath": "pages/index/index",

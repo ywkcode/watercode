@@ -20,6 +20,7 @@
 				password: ''
 			}
 		},
+		
 		computed: {
 			inputStyle() {
 				let style = {};
@@ -34,6 +35,9 @@
 			async submit() {
 				 var data={Account:this.username,Password:this.password};
                 //const res= await this.$u.api.login(data); 
+				var paramedata={PageSize:11,IsGas:false};
+				var aaaa= await this.$u.api.hisindex(paramedata);
+				 
 				uni.setStorageSync('username', this.username);
 				var localStorageUser = uni.getStorageSync('username');
 				this.$u.toast(localStorageUser + ',登陆成功');

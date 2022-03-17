@@ -1,27 +1,33 @@
 <template>
-	<view>
+	<view >
       
-	     <u-subsection :list="list" :current="0"></u-subsection>
-		 <myarcbar :testdata="mytestdata"></myarcbar>
-		 <view class="myouttext">
-			<view class="mytext"><view class="mytext_inner">TOC</view><u-tag text="20ml/g"  plainFill  plain   type="success"></u-tag></view>
-			<view class="mytext"><view class="mytext_inner">氨氮</view><u-tag text="20ml/g"  plainFill   type="warning"></u-tag></view>
-			<view class="mytext"><view class="mytext_inner">总磷</view><u-tag text="20ml/g" plainFill     type="warning"></u-tag></view>
-			<view class="mytext"><view class="mytext_inner">PH</view><u-tag text="20ml/g"  plainFill   type="success"></u-tag></view>
-			<view class="mytext"><view class="mytext_inner">流量</view><u-tag text="20ml/g"   plainFill   type="success"></u-tag></view>
+	     <u-subsection :list="list" :current="0" @change="sectionChange"></u-subsection>
+		 <view v-if="firstTab">
+			 <myarcbar :testdata="mytestdata"></myarcbar>
+			 <view class="myouttext">
+				<view class="mytext"><view class="mytext_inner">TOC</view><u-tag text="20ml/g"  plainFill  plain   type="success"></u-tag></view>
+				<view class="mytext"><view class="mytext_inner">氨氮</view><u-tag text="20ml/g"  plainFill   type="warning"></u-tag></view>
+				<view class="mytext"><view class="mytext_inner">总磷</view><u-tag text="20ml/g" plainFill     type="warning"></u-tag></view>
+				<view class="mytext"><view class="mytext_inner">PH</view><u-tag text="20ml/g"  plainFill   type="success"></u-tag></view>
+				<view class="mytext"><view class="mytext_inner">流量</view><u-tag text="20ml/g"   plainFill   type="success"></u-tag></view>
+			 </view>
+			
+			<u-gap height="10" bgColor="#bbb"></u-gap>
+			<view class="u-padding-20 mytitle">实时折线图</view>
+			<u-gap height="3" bgColor="#bbb"></u-gap>
+			<myarea :testdata="mytestdata"></myarea>
+			
+			<u-gap height="10" bgColor="#bbb"></u-gap>
+			<view class="u-padding-20 mytitle">实时监测数据</view>
+			<u-gap height="3" bgColor="#bbb"></u-gap> 
+			<mytable></mytable>
 		 </view>
-		
-		<u-gap height="10" bgColor="#bbb"></u-gap>
-		<view class="u-padding-20 mytitle">实时折线图</view>
-		<u-gap height="3" bgColor="#bbb"></u-gap>
-		<myarea :testdata="mytestdata"></myarea>
-		
-		<u-gap height="10" bgColor="#bbb"></u-gap>
-	    <view class="u-padding-20 mytitle">实时监测数据</view>
-		<u-gap height="3" bgColor="#bbb"></u-gap> 
-		<mytable></mytable>
-		 
-       
+         <view v-if="secondTab"> 
+         <mytable></mytable>
+       </view>
+	   <view v-if="thirdTab">
+	     <mytable></mytable>
+	   </view>
 	</view>
 </template>
 
@@ -42,11 +48,19 @@
 				// 或者如下，也可以配置keyName参数修改对象键名
 				// list: [{name: '未付款'}, {name: '待评价'}, {name: '已付款'}],
 				current: 0,
-
+                firstTab:true,
+				secondTab:false,
+				thirdTab:false
 			}
 		},
 		onLoad() {
 
+		},
+		onBackPress(e) {
+		    uni.navigateTo({
+		        url:'/pages/index/index'
+		    })
+		    return true;
 		},
 		onReady() {
 			//调用绘制方法
@@ -59,7 +73,15 @@
 		methods: {
 			click(item) {
 				console.log('item', item);
-			}
+			},
+			sectionChange(index) { 
+				this.firstTab=false;
+				 this.secondTab=false;
+			     this.thirdTab=false;
+			     if(index==0)  this.firstTab=true;
+				  if(index==1)  this.secondTab=true;
+				  if(index==2)  this.thirdTab=true;
+			 }
 
 		},
 

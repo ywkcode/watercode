@@ -199,39 +199,67 @@ namespace NetCoreFrame.WebApi.Controllers
             if (IsGas)
             {
                 historyResponse.namelists = "H2S,HCL,CL2,NH3,日期,状态".Split(',').ToList();
-                historyResponse.historyTableResponses =
-                    _water_GasService.AsQueryable()
+                var datalist = _water_GasService.AsQueryable()
                     .OrderBy(s => s.CreateTime, SqlSugar.OrderByType.Desc)
                     .Take(PageSize)
-                    .Select(s => new HistoryTableResponse()
+                    .Select(s => new
                     {
-                        data1 = s.H2S.ToString("0.000"),
-                        data2 = s.HCL.ToString("0.000"),
-                        data3 = s.CL2.ToString("0.000"),
-                        data4 = s.NH3.ToString("0.000"),
-                        CreateTime = s.CreateTime.ToString("yyyy-MM-dd HH:mm:ss"),
+                        data1 = s.H2S,
+                        data2 = s.HCL,
+                        data3 = s.CL2,
+                        data4 = s.NH3,
+                        CreateTime = s.CreateTime,
                         IsCorrect = s.IsError
                     }).ToList();
+                List<HistoryTableResponse> retlist = new List<HistoryTableResponse>();
+                foreach (var model in datalist)
+                {
+                    retlist.Add(new HistoryTableResponse()
+                    {
+                        data1 = model.data1.ToString("0.000"),
+                        data2 = model.data2.ToString("0.000"),
+                        data3 = model.data3.ToString("0.000"),
+                        data4 = model.data4.ToString("0.000"),
+                        CreateTime = model.CreateTime.ToString("yyyy-MM-dd HH:mm:ss"),
+                        IsCorrect = model.IsCorrect
+                    });
+                }
+                historyResponse.historyTableResponses = retlist;
+                 
             }
             else
             {
 
                 historyResponse.namelists = "TOC,AD,ZL,PH,LL,日期,状态".Split(',').ToList();
-                historyResponse.historyTableResponses =
+                var  datalist=
                     _water_QualityService.AsQueryable()
                     .OrderBy(s => s.CreateTime, SqlSugar.OrderByType.Desc)
                     .Take(PageSize)
-                    .Select(s => new HistoryTableResponse()
+                    .Select(s => new  
                     {
-                        data1 = s.TOC.ToString("0.000"),
-                        data2 = s.AD.ToString("0.000"),
-                        data3 = s.ZL.ToString("0.000"),
-                        data4 = s.PH.ToString("0.000"),
-                        data5 = s.LL.ToString("0.000"),
-                        CreateTime = s.CreateTime.ToString("yyyy-MM-dd HH:mm:ss"),
+                        data1 = s.TOC,
+                        data2 = s.AD,
+                        data3 = s.ZL,
+                        data4 = s.PH,
+                        data5 = s.LL,
+                        CreateTime = s.CreateTime,
                         IsCorrect = s.IsError
                     }).ToList();
-
+                List<HistoryTableResponse> retlist = new List<HistoryTableResponse>();
+                foreach (var model in datalist)
+                {
+                    retlist.Add(new HistoryTableResponse()
+                    {
+                        data1 = model.data1.ToString("0.000"),
+                        data2 = model.data2.ToString("0.000"),
+                        data3 = model.data3.ToString("0.000"),
+                        data4 = model.data4.ToString("0.000"),
+                        data5 = model.data5.ToString("0.000"),
+                        CreateTime = model.CreateTime.ToString("yyyy-MM-dd HH:mm:ss"),
+                        IsCorrect = model.IsCorrect
+                    });
+                }
+                historyResponse.historyTableResponses = retlist;
             }
             return historyResponse;
         }

@@ -1,9 +1,11 @@
-﻿using System;
+﻿using SqlSugar;
+using System;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 
 namespace NetCoreFrame.WebApi.Model
 {
+    [SugarTable("water_gas")]
     public class Water_Gas:BaseModel
     {
         [Display(Name = "设备Id")]

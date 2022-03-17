@@ -56,24 +56,30 @@ namespace NetCoreFrame.WebUI.Controllers
         }
 
         [HttpGet("home/board/data")]
-        public WaterResponse GetFive()
+        public WaterResponse GetFive(bool isgas)
         {
             WaterResponse data = new WaterResponse();
             List<WaterData> waterDatas = new List<WaterData>();
-            var quality = _dbContext.Water_Quality.OrderByDescending(s => s.CreateTime).FirstOrDefault();
-            var gas = _dbContext.Water_Gas.OrderByDescending(s => s.CreateTime).FirstOrDefault();
-            //水质
-            data.waterDatas.Add(new WaterData() { DataName = "COD(mg/L)", Data_Stand = "50.000", Data_Real = quality?.TOC.ToString("0.000") ?? "0.000" });
-            data.waterDatas.Add(new WaterData() { DataName = "氨氮(mg/L)", Data_Stand = "50.000", Data_Real = quality?.AD.ToString("0.000") ?? "0.000" });
-            data.waterDatas2.Add(new WaterData() { DataName = "总磷(mg/L)", Data_Stand = "0.500", Data_Real = quality?.ZL.ToString("0.000") ?? "0.000" });
-            data.waterDatas2.Add(new WaterData() { DataName = "PH(无量纲)", Data_Stand = "6-9", Data_Real = quality?.PH.ToString("0.000") ?? "0.000" });
-           
-            //气体
-            data.waterDatas3.Add(new WaterData() { DataName = "硫化氢(mg/m3)", Data_Stand = "0.060", Data_Real = gas?.H2S.ToString("0.000") ?? "0.000" });
-            data.waterDatas3.Add(new WaterData() { DataName = "氯化氢(mg/m3)", Data_Stand = "0.150", Data_Real = gas?.HCL.ToString("0.000") ?? "0.000" });
-            data.waterDatas4.Add(new WaterData() { DataName = "氯气(mg/m3)", Data_Stand = "0.500", Data_Real = gas?.CL2.ToString("0.000") ?? "0.000" });
-            data.waterDatas4.Add(new WaterData() { DataName = "氨气(mg/m3)", Data_Stand = "1.000", Data_Real = gas?.NH3.ToString("0.000") ?? "0.000" });
+            if (isgas)
+            {
+                var gas = _dbContext.Water_Gas.OrderByDescending(s => s.CreateTime).FirstOrDefault();
+                //气体
+                data.waterDatas.Add(new WaterData() { DataName = "硫化氢(mg/m3)", Data_Stand = "0.060", Data_Real = gas?.H2S.ToString("0.000") ?? "0.000" });
+                data.waterDatas.Add(new WaterData() { DataName = "氯化氢(mg/m3)", Data_Stand = "0.150", Data_Real = gas?.HCL.ToString("0.000") ?? "0.000" });
+                data.waterDatas2.Add(new WaterData() { DataName = "氯气(mg/m3)", Data_Stand = "0.500", Data_Real = gas?.CL2.ToString("0.000") ?? "0.000" });
+                data.waterDatas2.Add(new WaterData() { DataName = "氨气(mg/m3)", Data_Stand = "1.000", Data_Real = gas?.NH3.ToString("0.000") ?? "0.000" });
 
+            }
+            else
+            {
+                var quality = _dbContext.Water_Quality.OrderByDescending(s => s.CreateTime).FirstOrDefault(); 
+                //水质
+                data.waterDatas.Add(new WaterData() { DataName = "COD(mg/L)", Data_Stand = "50.000", Data_Real = quality?.TOC.ToString("0.000") ?? "0.000" });
+                data.waterDatas.Add(new WaterData() { DataName = "氨氮(mg/L)", Data_Stand = "50.000", Data_Real = quality?.AD.ToString("0.000") ?? "0.000" });
+                data.waterDatas2.Add(new WaterData() { DataName = "总磷(mg/L)", Data_Stand = "0.500", Data_Real = quality?.ZL.ToString("0.000") ?? "0.000" });
+                data.waterDatas2.Add(new WaterData() { DataName = "PH(无量纲)", Data_Stand = "6-9", Data_Real = quality?.PH.ToString("0.000") ?? "0.000" });
+            } 
+            
             data.NowDate = DateTime.Now.ToString("yyyy-MM-dd HH:mm");
             return data;
         }

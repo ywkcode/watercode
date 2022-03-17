@@ -172,6 +172,7 @@ namespace NetCoreFrame.SocketConsole
                 catch (Exception ex)
                 {
                     //Console.WriteLine($"Quality Receive Message Error：{ex.Message}");
+                    myclientSocket.Close();
                 }
                
 
@@ -205,6 +206,7 @@ namespace NetCoreFrame.SocketConsole
                 catch (Exception ex)
                 {
                     //Console.WriteLine($"Gas Receive Message Error：{ex.Message}");
+                    myclientSocket.Close();
                 }
                 
               

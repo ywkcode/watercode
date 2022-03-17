@@ -1,5 +1,9 @@
 <template>
 	<view>
+		<!-- <u-navbar  
+		 title="修水赣北钨业有限公司-总排口监测点"
+		 :autoBack="true" >
+		</u-navbar> -->
 		<view class="wrap">
 			<u-swiper :list="list" height="320"></u-swiper>
 		</view>
@@ -62,6 +66,12 @@
 		},
 		async onLoad() { 
 			  
+		},
+		onBackPress(e) {
+		    uni.navigateTo({
+		        url:'/pages/login/index'
+		    })
+		    return true;
 		},
 		methods: {
             click(name) {

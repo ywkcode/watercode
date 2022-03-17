@@ -19,15 +19,12 @@ namespace NetCoreFrame.Entity.ViewModel
         {
             waterDatas = new List<WaterData>();
             waterDatas2 = new List<WaterData>();
-            waterDatas3 = new List<WaterData>();
-            waterDatas4 = new List<WaterData>();
+            
             NowDate = DateTime.Now.ToString("yyyy-MM-dd HH:mm");
         }
         public string NowDate { get; set; }
         public List<WaterData> waterDatas { get; set; }
         public List<WaterData> waterDatas2 { get; set; }
-        public List<WaterData> waterDatas3 { get; set; }
-
-        public List<WaterData> waterDatas4 { get; set; }
+     
     }
 }
