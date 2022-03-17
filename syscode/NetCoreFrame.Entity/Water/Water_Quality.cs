@@ -51,5 +51,8 @@ namespace NetCoreFrame.Entity.Water
         [Display(Name = "创建日期")]
         [Column("createtime")]
         public DateTime CreateTime { get; set; }
+
+        [Column("iserror")]
+        public bool IsError { get; set; }
     }
 }

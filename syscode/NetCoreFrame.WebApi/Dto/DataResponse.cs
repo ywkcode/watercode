@@ -68,6 +68,33 @@ namespace NetCoreFrame.WebApi.Dto
         public bool IsCorrect { get; set; }
     }
 
-   
+    public class HistoryTableResponse
+    { 
+       public string data1 { get; set; }
 
+       public string data2 { get; set; }
+
+        public string data3 { get; set; }
+        public string data4 { get; set; }
+
+        public string data5 { get; set; } 
+
+        public string CreateTime { get; set; }
+        public bool IsCorrect { get; set; }
+    }
+
+    public class HistoryResponse
+    {
+        public HistoryResponse()
+        {
+            this.namelists = new List<string>();
+            this.historyTableResponses = new List<HistoryTableResponse>();
+        }
+        public List<string> namelists { get; set; }
+
+        public List<HistoryTableResponse> historyTableResponses { get; set; }
+    }
+     
+
+    
 }

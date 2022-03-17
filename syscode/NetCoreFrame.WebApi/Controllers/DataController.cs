@@ -16,7 +16,7 @@ namespace NetCoreFrame.WebApi.Controllers
     /// </summary>
     [Route("api/[controller]")]
     [ApiController]
-   
+
     public class DataController : ControllerBase
     {
         private readonly Water_GasService _water_GasService;
@@ -26,7 +26,12 @@ namespace NetCoreFrame.WebApi.Controllers
             _water_GasService = water_GasService;
             _water_QualityService = water_QualityService;
         }
-
+        /// <summary>
+        /// 五秒刷新
+        /// </summary>
+        /// <param name="VariableName"></param>
+        /// <param name="IsGas"></param>
+        /// <returns></returns>
         [HttpGet("five")]
         public async Task<DataResponse> GetCurrentData(string VariableName, bool IsGas)
         {
@@ -38,7 +43,7 @@ namespace NetCoreFrame.WebApi.Controllers
             //气体
             var gaslist = _water_GasService.AsQueryable().OrderBy(s => s.CreateTime, SqlSugar.OrderByType.Desc).Take(6).ToList();
 
-             
+
             #region 变量
             VariableNames variableNames = new VariableNames();
             variableNames.TOC = qualitylist.First()?.TOC.ToString("0.000") ?? "0.000";
@@ -69,7 +74,7 @@ namespace NetCoreFrame.WebApi.Controllers
                         {
                             CreateTime = s.CreateTime.ToString("yyyy-MM-dd HH:mm"),
                             CurrentData = s.H2S.ToString("0.000"),
-                            IsCorrect= s.H2S<Convert.ToDecimal("0.06")?true:false
+                            IsCorrect = s.H2S < Convert.ToDecimal("0.06") ? true : false
 
                         }).ToList();
                         break;
@@ -110,68 +115,68 @@ namespace NetCoreFrame.WebApi.Controllers
             }
             else
             {
-                
-                    chartData.categories = qualitylist.OrderBy(s => s.CreateTime).Select(s => s.CreateTime.ToString("HH:mm")).ToList();
-                    Series series = new Series();
-                    series.name = VariableName;
-                    switch (VariableName)
-                    {
-                        case "TOC":
-                      
-                            series.data = qualitylist.ToList().Select(s => s.TOC.ToString("0.000")).ToList();
-                            currentList = qualitylist.ToList().Select(s => new MyTableData()
-                            {
-                                CreateTime = s.CreateTime.ToString("yyyy-MM-dd HH:mm"),
-                                CurrentData = s.TOC.ToString("0.000"),
-                                IsCorrect = s.TOC < Convert.ToDecimal("50") ? true : false
 
-                            }).ToList();
-                            break;
-                        case "AD":
-                            series.data = qualitylist.ToList().Select(s => s.AD.ToString("0.000")).ToList();
-                            currentList = qualitylist.ToList().Select(s => new MyTableData()
-                            {
-                                CreateTime = s.CreateTime.ToString("yyyy-MM-dd HH:mm"),
-                                CurrentData = s.AD.ToString("0.000"),
-                                IsCorrect = s.AD < Convert.ToDecimal("5") ? true : false
+                chartData.categories = qualitylist.OrderBy(s => s.CreateTime).Select(s => s.CreateTime.ToString("HH:mm")).ToList();
+                Series series = new Series();
+                series.name = VariableName;
+                switch (VariableName)
+                {
+                    case "TOC":
 
-                            }).ToList();
-                            break;
-                        case "PH":
-                            series.data = qualitylist.ToList().Select(s => s.PH.ToString("0.000")).ToList();
-                            currentList = qualitylist.ToList().Select(s => new MyTableData()
-                            {
-                                CreateTime = s.CreateTime.ToString("yyyy-MM-dd HH:mm"),
-                                CurrentData = s.PH.ToString("0.000"),
-                                IsCorrect = (s.PH < Convert.ToDecimal("6") || s.PH > Convert.ToDecimal("9"))?false:true 
-                            }).ToList();
-                            break;
-                        case "ZL":
-                            series.data = qualitylist.ToList().Select(s => s.ZL.ToString("0.000")).ToList(); 
-                            currentList = qualitylist.ToList().Select(s => new MyTableData()
-                            {
-                                CreateTime = s.CreateTime.ToString("yyyy-MM-dd HH:mm"),
-                                CurrentData = s.ZL.ToString("0.000"),
-                                IsCorrect = s.ZL < Convert.ToDecimal("0.5") ? true : false
+                        series.data = qualitylist.ToList().Select(s => s.TOC.ToString("0.000")).ToList();
+                        currentList = qualitylist.ToList().Select(s => new MyTableData()
+                        {
+                            CreateTime = s.CreateTime.ToString("yyyy-MM-dd HH:mm"),
+                            CurrentData = s.TOC.ToString("0.000"),
+                            IsCorrect = s.TOC < Convert.ToDecimal("50") ? true : false
 
-                            }).ToList();
-                            break;
-                        case "LL":
-                            series.data = qualitylist.ToList().Select(s => s.LL.ToString("0.000")).ToList();
-                            currentList = qualitylist.ToList().Select(s => new MyTableData()
-                            {
-                                CreateTime = s.CreateTime.ToString("yyyy-MM-dd HH:mm"),
-                                CurrentData = s.LL.ToString("0.000"),
-                                IsCorrect = true 
-                            }).ToList();
-                            break;
-                        default:
-                            break;
-                    }
-                    chartData.series.Add(series);
+                        }).ToList();
+                        break;
+                    case "AD":
+                        series.data = qualitylist.ToList().Select(s => s.AD.ToString("0.000")).ToList();
+                        currentList = qualitylist.ToList().Select(s => new MyTableData()
+                        {
+                            CreateTime = s.CreateTime.ToString("yyyy-MM-dd HH:mm"),
+                            CurrentData = s.AD.ToString("0.000"),
+                            IsCorrect = s.AD < Convert.ToDecimal("5") ? true : false
+
+                        }).ToList();
+                        break;
+                    case "PH":
+                        series.data = qualitylist.ToList().Select(s => s.PH.ToString("0.000")).ToList();
+                        currentList = qualitylist.ToList().Select(s => new MyTableData()
+                        {
+                            CreateTime = s.CreateTime.ToString("yyyy-MM-dd HH:mm"),
+                            CurrentData = s.PH.ToString("0.000"),
+                            IsCorrect = (s.PH < Convert.ToDecimal("6") || s.PH > Convert.ToDecimal("9")) ? false : true
+                        }).ToList();
+                        break;
+                    case "ZL":
+                        series.data = qualitylist.ToList().Select(s => s.ZL.ToString("0.000")).ToList();
+                        currentList = qualitylist.ToList().Select(s => new MyTableData()
+                        {
+                            CreateTime = s.CreateTime.ToString("yyyy-MM-dd HH:mm"),
+                            CurrentData = s.ZL.ToString("0.000"),
+                            IsCorrect = s.ZL < Convert.ToDecimal("0.5") ? true : false
+
+                        }).ToList();
+                        break;
+                    case "LL":
+                        series.data = qualitylist.ToList().Select(s => s.LL.ToString("0.000")).ToList();
+                        currentList = qualitylist.ToList().Select(s => new MyTableData()
+                        {
+                            CreateTime = s.CreateTime.ToString("yyyy-MM-dd HH:mm"),
+                            CurrentData = s.LL.ToString("0.000"),
+                            IsCorrect = true
+                        }).ToList();
+                        break;
+                    default:
+                        break;
+                }
+                chartData.series.Add(series);
 
             }
-            dataResponse.chartData=chartData;
+            dataResponse.chartData = chartData;
             #endregion
 
             #region 列表
@@ -180,6 +185,106 @@ namespace NetCoreFrame.WebApi.Controllers
             #endregion
 
             return dataResponse;
+        }
+        /// <summary>
+        /// 历史数据
+        /// </summary>
+        /// <param name="PageSize"></param>
+        /// <param name="IsGas"></param>
+        /// <returns></returns>
+        [HttpGet("history")]
+        public async Task<HistoryResponse> GetHistory(int PageSize, bool IsGas)
+        {
+            HistoryResponse historyResponse = new HistoryResponse();
+            if (IsGas)
+            {
+                historyResponse.namelists = "H2S,HCL,CL2,NH3,日期,状态".Split(',').ToList();
+                historyResponse.historyTableResponses =
+                    _water_GasService.AsQueryable()
+                    .OrderBy(s => s.CreateTime, SqlSugar.OrderByType.Desc)
+                    .Take(PageSize)
+                    .Select(s => new HistoryTableResponse()
+                    {
+                        data1 = s.H2S.ToString("0.000"),
+                        data2 = s.HCL.ToString("0.000"),
+                        data3 = s.CL2.ToString("0.000"),
+                        data4 = s.NH3.ToString("0.000"),
+                        CreateTime = s.CreateTime.ToString("yyyy-MM-dd HH:mm:ss"),
+                        IsCorrect = s.IsError
+                    }).ToList();
+            }
+            else
+            {
+
+                historyResponse.namelists = "TOC,AD,ZL,PH,LL,日期,状态".Split(',').ToList();
+                historyResponse.historyTableResponses =
+                    _water_QualityService.AsQueryable()
+                    .OrderBy(s => s.CreateTime, SqlSugar.OrderByType.Desc)
+                    .Take(PageSize)
+                    .Select(s => new HistoryTableResponse()
+                    {
+                        data1 = s.TOC.ToString("0.000"),
+                        data2 = s.AD.ToString("0.000"),
+                        data3 = s.ZL.ToString("0.000"),
+                        data4 = s.PH.ToString("0.000"),
+                        data5 = s.LL.ToString("0.000"),
+                        CreateTime = s.CreateTime.ToString("yyyy-MM-dd HH:mm:ss"),
+                        IsCorrect = s.IsError
+                    }).ToList();
+
+            }
+            return historyResponse;
+        }
+        /// <summary>
+        /// 异常数据
+        /// </summary>
+        /// <param name="PageSize"></param>
+        /// <param name="IsGas"></param>
+        /// <returns></returns>
+        [HttpGet("error")]
+        public async Task<HistoryResponse> GetError(int PageSize, bool IsGas)
+        {
+            HistoryResponse historyResponse = new HistoryResponse();
+            if (IsGas)
+            {
+                historyResponse.namelists = "H2S,HCL,CL2,NH3,日期,状态".Split(',').ToList();
+                historyResponse.historyTableResponses =
+                    _water_GasService.AsQueryable()
+                    .OrderBy(s => s.CreateTime, SqlSugar.OrderByType.Desc)
+                    .Where(s=>s.IsError==true)
+                    .Take(PageSize)
+                    .Select(s => new HistoryTableResponse()
+                    {
+                        data1 = s.H2S.ToString("0.000"),
+                        data2 = s.HCL.ToString("0.000"),
+                        data3 = s.CL2.ToString("0.000"),
+                        data4 = s.NH3.ToString("0.000"),
+                        CreateTime = s.CreateTime.ToString("yyyy-MM-dd HH:mm:ss"),
+                        IsCorrect = s.IsError
+                    }).ToList();
+            }
+            else
+            {
+
+                historyResponse.namelists = "TOC,AD,ZL,PH,LL,日期,状态".Split(',').ToList();
+                historyResponse.historyTableResponses =
+                    _water_QualityService.AsQueryable()
+                    .OrderBy(s => s.CreateTime, SqlSugar.OrderByType.Desc)
+                     .Where(s => s.IsError == true)
+                    .Take(PageSize)
+                    .Select(s => new HistoryTableResponse()
+                    {
+                        data1 = s.TOC.ToString("0.000"),
+                        data2 = s.AD.ToString("0.000"),
+                        data3 = s.ZL.ToString("0.000"),
+                        data4 = s.PH.ToString("0.000"),
+                        data5 = s.LL.ToString("0.000"),
+                        CreateTime = s.CreateTime.ToString("yyyy-MM-dd HH:mm:ss"),
+                        IsCorrect = s.IsError
+                    }).ToList();
+
+            }
+            return historyResponse;
         }
     }
 }

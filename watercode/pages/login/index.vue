@@ -33,8 +33,7 @@
 		methods: {
 			async submit() {
 				 var data={Account:this.username,Password:this.password};
-                //const res= await this.$u.api.login(data);
-				debugger;
+                //const res= await this.$u.api.login(data); 
 				uni.setStorageSync('username', this.username);
 				var localStorageUser = uni.getStorageSync('username');
 				this.$u.toast(localStorageUser + ',登陆成功');
